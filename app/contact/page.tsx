@@ -79,7 +79,7 @@ export default function ContactPage() {
                     {PHONE_NUMBER}
                   </a>
                   <p className="mt-6 text-sm font-medium text-gray-500">
-                    For the fastest response, call during business hours (see below). If we miss you, leave a message or use email.
+                    For a quick response, call during business hours (see below). If we miss you, leave a message or use email.
                   </p>
                 </div>
 

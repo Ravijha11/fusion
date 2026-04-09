@@ -14,7 +14,7 @@ const HERO_IMAGES = [
 ] as const
 
 const HERO_LINES = [
-  'Same-day appliance repair when your kitchen or laundry room stops cold.',
+  'Appliance repair booking when your kitchen or laundry room stops cold.',
   'Licensed technicians, clear pricing, and honest diagnostics you can trust.',
   'Refrigerators, washers, ovens, dishwashers, TVs, and more — we come to you.',
   'Book online or call — most visits include a full assessment and next-step quote.',

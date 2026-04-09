@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const strip1 = [
-  'Same-day service',
+  'Scheduling options',
   'Licensed technicians',
   'Refrigeration',
   'Laundry',

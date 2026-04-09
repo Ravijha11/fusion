@@ -215,7 +215,7 @@ export default async function ServicePage({
 
               <div className="lg:col-span-5">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                  <p className="text-sm font-bold uppercase tracking-widest text-white/70">Need help now?</p>
+                  <p className="text-sm font-bold uppercase tracking-widest text-white/70">Need help?</p>
                   <a
                     href={PHONE_HREF}
                     className="mt-3 flex items-center gap-3 text-2xl font-black text-white hover:text-white/90"
@@ -315,7 +315,7 @@ export default async function ServicePage({
                 </div>
 
                 <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-5">
-                  <p className="text-sm font-bold uppercase tracking-widest text-gray-500">Need help now?</p>
+                  <p className="text-sm font-bold uppercase tracking-widest text-gray-500">Need help?</p>
                   <a
                     href={PHONE_HREF}
                     className="mt-3 inline-flex items-center gap-3 text-2xl font-black text-[#101921] hover:opacity-90 transition-opacity"
