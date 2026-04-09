@@ -111,7 +111,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">
-                Warranties and Guarantees
+                Warranties
               </h2>
               <p className="text-foreground leading-relaxed">
                 Any warranties on repair work or parts are provided by the individual 

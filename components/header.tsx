@@ -40,7 +40,7 @@ export function Header() {
         <div className="flex items-center gap-6">
           <a href={PHONE_HREF} className="flex items-center gap-2 hover:text-primary transition-colors">
             <Phone className="h-4 w-4 text-primary" />
-            <span>Emergency Repair: {PHONE_NUMBER}</span>
+            <span>Phone: {PHONE_NUMBER}</span>
           </a>
           <div className="h-4 w-px bg-white/20" />
           <div className="flex items-center gap-2">

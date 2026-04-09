@@ -29,7 +29,7 @@ export function ContactPromoStrip() {
             Need a technician?
           </p>
           <p className="max-w-2xl text-base leading-relaxed text-slate-100 sm:text-lg">
-            <span className="font-semibold text-amber-300">Call us</span> for the fastest response —
+            <span className="font-semibold text-amber-300">Call us</span> for a quick response —
             or use the contact form for a written summary of your issue. We respond during business
             hours and outline next steps clearly.
           </p>

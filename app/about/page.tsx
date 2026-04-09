@@ -53,7 +53,7 @@ const values = [
 ]
 
 const stats = [
-  { value: 'Same-day', label: 'Appointments (when available)' },
+  { value: 'Flexible', label: 'Appointments (when available)' },
   { value: 'Upfront', label: 'Written estimates' },
   { value: 'Local', label: 'Technician network' },
   { value: 'Clear', label: 'Starting prices' },
@@ -291,7 +291,7 @@ export default function AboutPage() {
               Ready to Get Your Appliance Fixed?
             </h2>
             <p className="mt-4 text-xl text-muted-foreground">
-              Book a same-day repair or call us to discuss your needs.
+              Book a repair request online or call us to discuss your needs.
             </p>
             
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">

@@ -24,11 +24,12 @@ const faqs = [
   },
   {
     question: "Do you offer same-day repair services?",
-    answer: "Yes, we offer same-day repair services whenever possible. We understand the urgency of appliance breakdowns and strive to provide prompt assistance."
+    answer: "Same-day appointments may be available depending on technician availability and scheduling. When you call or submit a request, we’ll share the earliest available options."
   },
   {
     question: "What brands do you service?",
-    answer: "We service all major appliance brands, including Samsung, LG, Whirlpool, GE, Bosch, and many others. Our technicians are trained to handle a variety of models."
+    answer:
+      "We service many major appliance brands and models. Share the brand/model when you book so we can match you with the right technician."
   },
   {
     question: "How do I schedule a repair service?",
@@ -36,7 +37,8 @@ const faqs = [
   },
   {
     question: "Is there a warranty on your repairs?",
-    answer: "Yes, we offer a warranty on all our repairs. The warranty duration varies depending on the type of repair, but we stand behind our work and ensure customer satisfaction."
+    answer:
+      "Warranty terms can vary depending on the technician, the repair type, and the parts used. Your technician will explain any applicable warranty terms before you approve the repair."
   },
   {
     question: "What areas do you service?",
@@ -68,7 +70,7 @@ export function ContactFaqSection() {
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
                 <p className="text-gray-300 mb-8">
-                  If you have additional questions that are not covered in our FAQs page, please do not hesitate to contact us.
+                  If you have additional questions that are not covered in our FAQs page, please contact us.
                 </p>
                 <Button
                   asChild
@@ -106,19 +108,13 @@ export function ContactFaqSection() {
           </div>
         </div>
 
-        {/* Brands Section */}
+        {/* Compatibility note (no brand claims) */}
         <div className="text-center bg-white rounded-[2.5rem] p-12 border border-gray-100 shadow-sm">
-          <h2 className="text-3xl font-bold text-[#101921] mb-12">We Repair All Major Brand Appliances</h2>
-          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-60">
-             {/* Simulated brand logos using text for now, ideally SVGs go here */}
-            <h3 className="text-3xl font-black tracking-tighter">SAMSUNG</h3>
-            <h3 className="text-3xl font-black">LG</h3>
-            <h3 className="text-3xl font-black tracking-widest text-[#E31837]">Whirlpool</h3>
-            <h3 className="text-4xl font-serif font-black">GE</h3>
-            <h3 className="text-3xl font-black text-blue-900">BOSCH</h3>
-            <h3 className="text-3xl font-black text-red-600">KitchenAid</h3>
-            <h3 className="text-3xl font-black text-sky-700">SUB-ZERO</h3>
-          </div>
+          <h2 className="text-3xl font-bold text-[#101921] mb-4">Appliance compatibility</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            We work with a wide range of appliance brands and models. To help us confirm availability,
+            please include the brand and model number in your request.
+          </p>
         </div>
 
       </div>

@@ -101,7 +101,8 @@ const faqs = [
   },
   {
     question: 'What brands do you service?',
-    answer: 'We service all major appliance brands including GE, Samsung, LG, Whirlpool, Maytag, KitchenAid, Frigidaire, Bosch, and many more. If you\'re unsure, just ask when you book.',
+    answer:
+      'We service many major appliance brands and models. If you\'re unsure whether your appliance is covered, include the brand/model in your booking request and we\'ll confirm.',
   },
   {
     question: 'Is there a warranty on repairs?',
