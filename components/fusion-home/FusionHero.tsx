@@ -117,7 +117,7 @@ export function FusionHero() {
         <div className="hero-content relative z-10 w-full max-w-4xl px-2 text-center text-white">
           <div className="hero-heading-wrap">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-              Smart Pro · New York
+              DigitalBull · New York
             </p>
             <h1
               id="hero-heading"

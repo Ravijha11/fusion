@@ -10,25 +10,25 @@ import { ChatBot } from '@/components/chat-bot'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Smart Pro — Advanced Appliance Restoration',
-    template: '%s | Smart Pro',
+    default: 'DigitalBull — Advanced Appliance Restoration',
+    template: '%s | DigitalBull',
   },
   description:
     'Licensed appliance repair in the New York area: refrigerators, laundry, cooking appliances, and more. Clear pricing and same-day options when available.',
-  keywords: ['appliance repair', 'New York', 'refrigerator repair', 'washing machine repair', 'advanced tech', 'same-day service', 'Smart Pro'],
-  authors: [{ name: 'Smart Pro' }],
-  creator: 'Smart Pro',
-  publisher: 'Smart Pro',
-  metadataBase: new URL('https://fusionfame.tech'),
+  keywords: ['appliance repair', 'New York', 'refrigerator repair', 'washing machine repair', 'advanced tech', 'same-day service', 'DigitalBull'],
+  authors: [{ name: 'DigitalBull' }],
+  creator: 'DigitalBull',
+  publisher: 'DigitalBull',
+  metadataBase: new URL('https://www.digitalbull.co.in'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://fusionfame.tech',
-    siteName: 'Smart Pro',
-    title: 'Smart Pro — Advanced Appliance Restoration',
+    url: 'https://www.digitalbull.co.in',
+    siteName: 'DigitalBull',
+    title: 'DigitalBull — Advanced Appliance Restoration',
     description:
       'Licensed appliance repair in the New York area with clear pricing and same-day options when available.',
     images: [
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Smart Pro — Professional appliance restoration',
+        alt: 'DigitalBull — Professional appliance restoration',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Smart Pro — Advanced Appliance Restoration',
+    title: 'DigitalBull — Advanced Appliance Restoration',
     description: 'Precision engineering and expert appliance restoration in New York.',
     images: ['/og-image.jpg'],
   },
@@ -59,20 +59,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/favicon/favicon.ico' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
+    apple: '/favicon/apple-touch-icon.png',
+    other: [{ rel: 'manifest', url: '/favicon/site.webmanifest' }],
   },
 }
 
@@ -90,12 +82,12 @@ export const viewport: Viewport = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://fusionfame.tech/#organization',
-  name: 'Smart Pro',
+  '@id': 'https://www.digitalbull.co.in/#organization',
+  name: 'DigitalBull',
   description: 'Precision engineering and expert appliance restoration in New York.',
-  url: 'https://fusionfame.tech',
+  url: 'https://www.digitalbull.co.in',
   telephone: '+1-555-123-4567',
-  email: 'support@fusionfame.tech',
+  email: 'support@digitalbull.co.in',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'New York',

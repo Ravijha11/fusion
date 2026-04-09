@@ -10,7 +10,7 @@ export function ContactPromoStrip() {
   return (
     <section
       id="contact"
-      aria-label="Contact Smart Pro"
+      aria-label="Contact DigitalBull"
       className="relative overflow-hidden border-y border-amber-400/25 bg-gradient-to-br from-[#15153b] via-[#252547] to-[#1a1a3e]"
     >
       <div

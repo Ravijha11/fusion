@@ -33,8 +33,8 @@ export default function PrivacyPolicyPage() {
                 Introduction
               </h2>
               <p className="text-foreground leading-relaxed">
-                <strong>FusionFame Tech</strong> (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates this website and
-                booking service at <strong>fusionfame.tech</strong> and is committed to protecting your privacy.
+                <strong>DigitalBull</strong> (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates this website and
+                booking service at <strong>www.digitalbull.co.in</strong> and is committed to protecting your privacy.
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when
                 you visit our site and use our services.
               </p>
@@ -255,7 +255,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <address className="not-italic mt-4 text-foreground">
                 <p><strong>Appliance repair service</strong></p>
-                <p>Email: privacy@fusionfame.tech</p>
+                <p>Email: privacy@digitalbull.co.in</p>
                 <p>Phone: 555-123-4567</p>
               </address>
             </section>

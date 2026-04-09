@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Refund and Return Policy',
-  description: 'Refund and Return Policy for Smart Pro appliance repair services.',
+  description: 'Refund and Return Policy for DigitalBull appliance repair services.',
   alternates: {
     canonical: '/refund',
   },
@@ -86,8 +86,8 @@ export default function RefundPolicyPage() {
                 explanation of the issue.
               </p>
               <address className="not-italic mt-4 text-gray-500">
-                <p><strong>Smart Pro</strong></p>
-                <p>Email: support@fusionfame.tech</p>
+                <p><strong>DigitalBull</strong></p>
+                <p>Email: support@digitalbull.co.in</p>
                 <p>Phone: 555-123-4567</p>
               </address>
             </section>

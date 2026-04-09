@@ -76,7 +76,7 @@ export default async function ServicePage({
     description: service.longDescription,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'Smart Pro',
+      name: 'DigitalBull',
       telephone: '+1-555-123-4567',
     },
     areaServed: {

@@ -28,7 +28,7 @@ const strip2 = [
   'Book online',
 ]
 
-const AVATAR_SRC = '/placeholder-user.jpg'
+const AVATAR_SRC = '/Logo/digital-bull-logo-removebg-preview.png'
 
 const PHONE_DISPLAY = '555-123-4567'
 
@@ -106,17 +106,28 @@ export function FusionRowsQuote() {
                     who respect your home.
                   </p>
                   <div className="hor-wrap gap-2">
-                    <Image
-                      src={AVATAR_SRC}
-                      width={128}
-                      height={128}
-                      loading="lazy"
-                      alt="Smart Pro customer care"
+                    <div
                       className="ava-128"
-                    />
+                      style={{
+                        backgroundColor: '#ffffff',
+                        borderRadius: 9999,
+                        boxShadow: '0 10px 25px rgba(0,0,0,0.18)',
+                        padding: 10,
+                      }}
+                      aria-hidden
+                    >
+                      <Image
+                        src={AVATAR_SRC}
+                        width={128}
+                        height={128}
+                        loading="lazy"
+                        alt="DigitalBull logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                      />
+                    </div>
                     <div className="ver-wrap gap-025">
                       <div className="txt-32">
-                        <strong>Smart Pro</strong>{' '}
+                        <strong>DigitalBull</strong>{' '}
                         <span className="txt-24" style={{ color: '#64748b' }}>
                           {PHONE_DISPLAY}
                         </span>

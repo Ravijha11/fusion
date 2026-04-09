@@ -110,10 +110,26 @@ export default function ContactPage() {
                       <div className="min-w-0">
                         <p className="font-bold text-[#101921]">Email Address</p>
                         <a
-                          href="mailto:support@fusionfame.tech"
+                          href="mailto:support@digitalbull.co.in"
                           className="text-sm font-semibold text-gray-700 hover:text-[#F15A24] transition-colors break-all"
                         >
-                          support@fusionfame.tech
+                          support@digitalbull.co.in
+                        </a>
+                      </div>
+                    </div>
+                    <div className="rounded-xl bg-white border border-gray-200 p-5 flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-lg bg-[#eef0ff] flex items-center justify-center text-[#3b3be0]">
+                        <MapPin className="h-6 w-6" aria-hidden />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="font-bold text-[#101921]">Website</p>
+                        <a
+                          href="https://www.digitalbull.co.in"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-semibold text-gray-700 hover:text-[#F15A24] transition-colors break-all"
+                        >
+                          www.digitalbull.co.in
                         </a>
                       </div>
                     </div>

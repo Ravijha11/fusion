@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -101,15 +102,29 @@ export function Header() {
   return (
     <>
       <div className="fixed inset-x-0 top-0 z-[60] flex flex-col">
-        <a
-          href={PHONE_HREF}
-          onClick={() => trackPhoneClick()}
-          className="flex h-10 w-full items-center justify-center gap-2 bg-[#0f172a] px-4 text-sm font-semibold text-white sm:text-base"
-          aria-label={`Call us at ${PHONE_DISPLAY}`}
-        >
-          <Phone className="h-4 w-4 shrink-0 text-amber-400" aria-hidden />
-          <span className="tabular-nums tracking-wide">{PHONE_DISPLAY}</span>
-        </a>
+        <div className="flex h-10 w-full items-center justify-center gap-2 bg-[#0f172a] px-4 text-sm font-semibold text-white sm:text-base">
+          <a
+            href={PHONE_HREF}
+            onClick={() => trackPhoneClick()}
+            className="inline-flex items-center gap-2"
+            aria-label={`Call us at ${PHONE_DISPLAY}`}
+          >
+            <Phone className="h-4 w-4 shrink-0 text-amber-400" aria-hidden />
+            <span className="tabular-nums tracking-wide">{PHONE_DISPLAY}</span>
+          </a>
+          <span className="mx-2 text-white/40" aria-hidden>
+            |
+          </span>
+          <a
+            href="https://www.digitalbull.co.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-amber-200 underline-offset-4 hover:underline"
+            aria-label="Visit www.digitalbull.co.in"
+          >
+            www.digitalbull.co.in
+          </a>
+        </div>
 
         <header className="relative w-full border-b border-gray-200 bg-white shadow-sm">
           <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 lg:h-16 lg:gap-6 lg:px-8">
@@ -118,14 +133,17 @@ export function Header() {
               href="/"
               className="flex min-w-0 shrink-0 items-center gap-2 opacity-95 hover:opacity-100 lg:gap-3"
             >
-              <div
-                className="flex h-10 w-10 items-center justify-center rounded-lg sm:h-11 sm:w-11"
-                style={{ background: `linear-gradient(135deg, ${CTA_ORANGE}, #c62828)` }}
-              >
-                <Cpu className="h-5 w-5 text-white sm:h-6 sm:w-6" aria-hidden />
+              <div className="relative h-12 w-12 sm:h-14 sm:w-14">
+                <Image
+                  src="/Logo/digital-bull-logo-removebg-preview.png"
+                  alt="DigitalBull logo"
+                  fill
+                  sizes="56px"
+                  className="rounded-lg object-contain"
+                />
               </div>
               <span className="hidden text-lg font-extrabold uppercase tracking-tight text-slate-900 sm:block sm:text-xl">
-                Smart <span style={{ color: CTA_ORANGE }}>Pro</span>
+                Digital<span style={{ color: CTA_ORANGE }}>Bull</span>
               </span>
             </Link>
 

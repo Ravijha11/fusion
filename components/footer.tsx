@@ -50,10 +50,10 @@ export function Footer() {
           {/* Brand and contact */}
           <div className="lg:col-span-1">
             <Link href="/" className="mb-6 block">
-              <div className="relative h-12 w-48">
+              <div className="relative h-16 w-56">
                 <Image
-                  src="/Logo/Screenshot 2026-04-09 003835.png"
-                  alt="Smart Pro logo"
+                  src="/Logo/digital-bull-logo-removebg-preview.png"
+                  alt="DigitalBull logo"
                   fill
                   className="object-contain drop-shadow-sm"
                 />
@@ -81,13 +81,24 @@ export function Footer() {
                 <span>{PHONE_NUMBER}</span>
               </a>
               <a
-                href="mailto:support@fusionfame.tech"
+                href="mailto:support@digitalbull.co.in"
                 className="flex items-center gap-3 text-[15px] font-medium text-white/90 transition-colors hover:text-amber-200"
               >
                 <div className="rounded-full bg-white/10 p-2">
                   <Mail className="h-4 w-4 text-primary" aria-hidden="true" />
                 </div>
-                <span>support@fusionfame.tech</span>
+                <span>support@digitalbull.co.in</span>
+              </a>
+              <a
+                href="https://www.digitalbull.co.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-[15px] font-medium text-white/90 transition-colors hover:text-amber-200"
+              >
+                <div className="rounded-full bg-white/10 p-2">
+                  <ArrowRight className="h-4 w-4 text-primary" aria-hidden="true" />
+                </div>
+                <span>www.digitalbull.co.in</span>
               </a>
               <div className="flex items-start gap-3 text-[15px] font-medium text-white/90">
                 <div className="rounded-full bg-white/10 p-2">
@@ -156,7 +167,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-8 md:flex-row">
           <p className="text-sm text-white/75">
-            &copy; {currentYear} Smart Pro. All rights reserved.
+            &copy; {currentYear} DigitalBull. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link
