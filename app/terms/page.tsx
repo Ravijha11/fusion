@@ -149,7 +149,7 @@ export default function TermsPage() {
               </p>
               <ul className="list-disc pl-6 text-foreground space-y-2 mt-3">
                 <li>Provide accurate and truthful information</li>
-                <li>Ensure safe access to the appliance needing repair</li>
+                <li>Provide safe access to the appliance needing repair</li>
                 <li>Be present during the scheduled service appointment</li>
                 <li>Pay for services rendered in a timely manner</li>
                 <li>Treat technicians with respect</li>

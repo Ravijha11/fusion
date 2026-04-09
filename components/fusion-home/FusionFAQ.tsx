@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Do you warranty your work?',
-    a: 'Yes. We stand behind eligible repairs with a parts and labor warranty. Terms vary by repair type and are summarized in our Terms of Service and Refund Policy.',
+    a: 'Warranty terms vary by technician, repair type, and parts used. If a warranty applies, the technician will explain the terms before you approve the repair.',
   },
   {
     q: 'Which brands do you service?',

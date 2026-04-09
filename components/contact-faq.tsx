@@ -20,7 +20,8 @@ const faqs = [
   },
   {
     question: "What is your pricing structure for repairs?",
-    answer: "Our pricing is transparent and competitive. We provide upfront pricing based on the specific appliance and issue, so there are no surprises."
+    answer:
+      "We provide clear pricing and a written estimate after diagnosis. Final pricing depends on the specific issue, parts required, and labor."
   },
   {
     question: "Do you offer same-day repair services?",
@@ -46,7 +47,8 @@ const faqs = [
   },
   {
     question: "How do I know if my appliance is worth repairing?",
-    answer: "We provide a professional assessment during our diagnostic visit. If the cost of repair is close to the cost of replacement, we’ll advise you on the best course of action."
+    answer:
+      "During the diagnostic visit, the technician will assess the issue and share options. If the estimated repair cost is close to replacement cost, they can help you compare next steps."
   },
   {
     question: "Do you offer any discounts or promotions?",
