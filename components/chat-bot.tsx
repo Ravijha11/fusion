@@ -1,38 +1,30 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { MessageSquare, Send, X, Minus } from 'lucide-react'
+import { MessageSquare, Send, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import { services } from '@/lib/services'
 
 interface Message {
   text: string
   sender: 'user' | 'bot'
 }
 
-const PRE_ANSWERED: Record<string, string> = {
-  'hello': 'Hello! How can I help you with your appliance repair today?',
-  'hi': 'Hi there! Looking for appliance service in New York?',
-  'price': 'Our initial service call starts at $89. This includes a full professional diagnosis.',
-  'cost': 'Service calls start at $89. We provide a full quote before starting any repair.',
-  'refrigerator': 'We specialize in all refrigerator models. Same-day service is usually available!',
-  'fridge': 'Fridge issues? Our technicians are experts at cooling system restoration.',
-  'washer': 'Washing machine acting up? We fix leaks, drum issues, and electronic failures.',
-  'washing machine': 'We repair all major washing machine brands, both front and top load.',
-  'dryer': 'Dryer not heating? We handle gas and electric dryer repairs safely.',
-  'tv': 'Television problems? We provide expert repair for LED, OLED, and Smart TVs.',
-  'computer': 'Laptop or PC issues? Our technicians can assist with hardware and software recovery.',
-  'contact': 'You can reach us directly at 555-123-4567 or book an appointment using the form on this page.',
-  'phone': 'Our direct line is 555-123-4567. We are available 24/7 for emergencies.',
-  'appointment': 'You can book a same-day appointment by clicking "Initialize Repair" at the top of the page.',
-  'time': 'Most of our technicians arrive within 60-90 minutes of your request.',
-  'warranty': 'All our repairs come with a full parts and labor warranty for your peace of mind.',
+const COMPANY_DISPLAY = 'Smart Pro from FusionFame.in'
+const PHONE_NUMBER = '555-123-4567'
+
+type ChatBotProps = {
+  /** Optional: preselect service when on a service subpage */
+  serviceSlug?: string
 }
 
-export function ChatBot() {
+export function ChatBot({ serviceSlug }: ChatBotProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [selectedServiceSlug, setSelectedServiceSlug] = useState<string | null>(serviceSlug ?? null)
   const [messages, setMessages] = useState<Message[]>([
-    { text: 'Hi! I am the Smart Pro assistant. Ask me about our services or pricing!', sender: 'bot' }
+    { text: `Hi! Welcome to ${COMPANY_DISPLAY}.`, sender: 'bot' },
+    { text: 'Which service do you want?', sender: 'bot' },
   ])
   const [inputValue, setInputValue] = useState('')
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -43,6 +35,20 @@ export function ChatBot() {
     }
   }, [messages])
 
+  const handlePickService = (slug: string) => {
+    const service = services.find((s) => s.slug === slug)
+    setSelectedServiceSlug(slug)
+    setMessages((prev) => [
+      ...prev,
+      { text: service?.name ?? 'Service', sender: 'user' },
+      {
+        text: `${service?.name ?? 'This service'} price: Starting at ${service?.startingPrice ?? ''} (same as shown on our website).`,
+        sender: 'bot',
+      },
+      { text: `Call us: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`, sender: 'bot' },
+    ])
+  }
+
   const handleSend = () => {
     if (!inputValue.trim()) return
 
@@ -50,17 +56,17 @@ export function ChatBot() {
     setMessages(prev => [...prev, { text: userMessage, sender: 'user' }])
     setInputValue('')
 
-    // Auto-answer logic
+    // Fallback: try to map typed text to a known service.
     setTimeout(() => {
       const lowerMessage = userMessage.toLowerCase()
-      let botResponse = "I'm not sure about that. Would you like me to connect you with a technician? You can call us at 555-123-4567."
+      const serviceMatch =
+        services.find((s) => lowerMessage.includes(s.slug.replace(/-/g, ' '))) ??
+        services.find((s) => lowerMessage.includes(s.shortName.toLowerCase())) ??
+        services.find((s) => lowerMessage.includes(s.name.toLowerCase()))
 
-      for (const [key, value] of Object.entries(PRE_ANSWERED)) {
-        if (lowerMessage.includes(key)) {
-          botResponse = value
-          break
-        }
-      }
+      const botResponse = serviceMatch
+        ? `${serviceMatch.name} price: Starting at ${serviceMatch.startingPrice} (same as shown on our website).\nCall us: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`
+        : `Please choose a service using the buttons below.\nCall us: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`
 
       setMessages(prev => [...prev, { text: botResponse, sender: 'bot' }])
     }, 600)
@@ -97,7 +103,7 @@ export function ChatBot() {
                   <div 
                     key={i} 
                     className={cn(
-                      "px-4 py-3 rounded-2xl max-w-[85%] text-sm leading-relaxed",
+                      "px-4 py-3 rounded-2xl max-w-[85%] text-sm leading-relaxed whitespace-pre-line",
                       msg.sender === 'user' 
                         ? "bg-primary text-white self-end rounded-br-sm shadow-[0_0_15px_rgba(var(--primary),0.3)]" 
                         : "bg-white/10 text-white self-start rounded-bl-sm border border-white/5"
@@ -107,19 +113,46 @@ export function ChatBot() {
                   </div>
                 ))}
               </div>
+
+              {!selectedServiceSlug && (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {services.map((s) => (
+                    <button
+                      key={s.slug}
+                      type="button"
+                      onClick={() => handlePickService(s.slug)}
+                      className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold text-white hover:bg-white/10 transition-colors"
+                    >
+                      {s.shortName}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {selectedServiceSlug && (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedServiceSlug(null)}
+                    className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold text-white hover:bg-white/10 transition-colors"
+                  >
+                    Choose another service
+                  </button>
+                </div>
+              )}
             </div>
 
             <div className="flex items-center p-4 bg-black/40 border-t border-white/10 backdrop-blur-md">
               <input 
                 type="text" 
                 className="flex-1 bg-transparent border-none outline-none text-sm text-white placeholder-white/40 placeholder:italic px-2"
-                placeholder="Initialize inquiry..."
+                placeholder="Type here (optional)…"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
               />
               <button 
-                className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white hover:bg-white hover:text-primary transition-colors shadow-lg" 
+                className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg" 
                 onClick={handleSend}
               >
                 <Send className="h-4 w-4" />
