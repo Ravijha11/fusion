@@ -11,7 +11,7 @@ interface Message {
   sender: 'user' | 'bot'
 }
 
-const COMPANY_DISPLAY = 'Smart Pro from FusionFame.in'
+const COMPANY_DISPLAY = 'DigitalBull'
 const PHONE_NUMBER = '555-123-4567'
 
 type ChatBotProps = {
@@ -91,7 +91,7 @@ export function ChatBot({ serviceSlug }: ChatBotProps) {
             className="fixed bottom-24 right-6 z-[1000] w-[350px] overflow-hidden rounded-[2rem] glass-dark border-primary/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] font-sans flex flex-col"
           >
             <div className="flex items-center justify-between bg-black/60 p-5 border-b border-white/10">
-              <span className="text-sm font-black uppercase tracking-widest text-primary text-glow">Smart<span className="text-white"> Pro</span></span>
+              <span className="text-sm font-black uppercase tracking-widest text-primary text-glow">Digital<span className="text-white">Bull</span></span>
               <button onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors text-white/50">
                 <X className="h-5 w-5" />
               </button>

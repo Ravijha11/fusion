@@ -8,7 +8,7 @@ import { FusionFAQ } from '@/components/fusion-home/FusionFAQ'
 export const metadata: Metadata = {
   title: 'Appliance Repair in New York',
   description:
-    'Smart Pro — appliance repair booking in New York with qualified technicians and clear starting prices. Book online or call.',
+    'DigitalBull — appliance repair booking in New York with qualified technicians and clear starting prices. Book online or call.',
   alternates: {
     canonical: '/',
   },

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -49,12 +50,18 @@ export function FusionFAQ() {
           >
             <div className="rounded-3xl bg-[#4b32c3] p-7 text-white shadow-[0_18px_60px_rgba(0,0,0,0.18)] sm:p-9 lg:sticky lg:top-24">
               <div className="flex items-center gap-4">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-4 border-[#ffc700] bg-white/10 text-xl font-bold sm:h-20 sm:w-20">
-                  SP
+                <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-4 border-[#ffc700] bg-white shadow-[0_10px_25px_rgba(0,0,0,0.25)] sm:h-20 sm:w-20">
+                  <Image
+                    src="/Logo/digital-bull-logo-removebg-preview.png"
+                    alt="DigitalBull logo"
+                    fill
+                    sizes="80px"
+                    className="rounded-full object-contain p-2.5"
+                  />
                 </div>
                 <div className="min-w-0">
                   <div className="truncate text-xl font-semibold leading-tight sm:text-2xl">
-                    Smart Pro
+                    DigitalBull
                   </div>
                   <div className="text-sm text-white/80 sm:text-base">Appliance repair team</div>
                 </div>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: 'Terms of Service for Smart Pro. Read our terms and conditions for using our appliance repair services.',
+  description: 'Terms of Service for DigitalBull. Read our terms and conditions for using our appliance repair services.',
   alternates: {
     canonical: '/terms',
   },
@@ -32,7 +32,7 @@ export default function TermsPage() {
                 Agreement to Terms
               </h2>
               <p className="text-foreground leading-relaxed">
-                By accessing or using the Smart Pro website and services, 
+                By accessing or using the DigitalBull website and services, 
                 you agree to be bound by these Terms of Service. If you do not agree with 
                 any part of these terms, you may not use our services.
               </p>
@@ -43,13 +43,13 @@ export default function TermsPage() {
                 Description of Services
               </h2>
               <p className="text-foreground leading-relaxed">
-                Smart Pro is a referral service that connects customers 
+                DigitalBull is a referral service that connects customers 
                 with independent local appliance repair technicians. We facilitate the 
                 scheduling and coordination of appliance repair services.
               </p>
               <p className="text-foreground leading-relaxed mt-4">
                 <strong>Important:</strong> Repair services are performed by independent 
-                contractors, not employees of Smart Pro. We are not 
+                contractors, not employees of DigitalBull. We are not 
                 responsible for the quality of work performed by these technicians.
               </p>
             </section>
@@ -115,7 +115,7 @@ export default function TermsPage() {
               </h2>
               <p className="text-foreground leading-relaxed">
                 Any warranties on repair work or parts are provided by the individual 
-                technician, not Smart Pro. Please discuss warranty 
+                technician, not DigitalBull. Please discuss warranty 
                 terms directly with your technician before the repair.
               </p>
             </section>
@@ -125,7 +125,7 @@ export default function TermsPage() {
                 Limitation of Liability
               </h2>
               <p className="text-foreground leading-relaxed">
-                Smart Pro acts as a referral service and is not liable for:
+                DigitalBull acts as a referral service and is not liable for:
               </p>
               <ul className="list-disc pl-6 text-foreground space-y-2 mt-3">
                 <li>The quality of repair work performed by technicians</li>
@@ -162,7 +162,7 @@ export default function TermsPage() {
               </h2>
               <p className="text-foreground leading-relaxed">
                 All content on this website, including text, graphics, logos, and images, 
-                is the property of Smart Pro and is protected by 
+                is the property of DigitalBull and is protected by 
                 copyright and trademark laws.
               </p>
             </section>
@@ -198,8 +198,8 @@ export default function TermsPage() {
                 If you have questions about these Terms of Service, please contact us:
               </p>
               <address className="not-italic mt-4 text-foreground">
-                <p><strong>Smart Pro</strong></p>
-                <p>Email: legal@fusionfame.tech</p>
+                <p><strong>DigitalBull</strong></p>
+                <p>Email: legal@digitalbull.co.in</p>
                 <p>Phone: 555-123-4567</p>
               </address>
             </section>
