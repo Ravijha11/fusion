@@ -54,7 +54,7 @@ export default function ServicesPage() {
               <Button
                 asChild
                 variant="outline"
-                className="h-12 px-7 text-base font-semibold rounded-none border-white/30 text-white hover:bg-white/10"
+                className="h-12 px-7 text-base font-semibold rounded-none border-white/30 bg-transparent text-white hover:bg-white/10"
               >
                 <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
                   <Phone className="mr-2 h-5 w-5" aria-hidden="true" />

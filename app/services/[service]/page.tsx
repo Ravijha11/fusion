@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BookingForm } from '@/components/booking-form'
 import { Button } from '@/components/ui/button'
+import { ChatBot } from '@/components/chat-bot'
 import { services, getServiceBySlug } from '@/lib/services'
 import { getServiceCardImage } from '@/lib/service-card-images'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
@@ -100,6 +101,7 @@ export default async function ServicePage({
     <>
       
       <main id="main-content" className="flex-1">
+        <ChatBot serviceSlug={service.slug} />
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -173,7 +175,7 @@ export default async function ServicePage({
                   <Button
                     asChild
                     variant="outline"
-                    className="h-12 px-7 text-base font-semibold rounded-none border-white/30 text-white hover:bg-white/10"
+                    className="h-12 px-7 text-base font-semibold rounded-none border-white/30 bg-transparent text-white hover:bg-white/10"
                   >
                     <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
                       <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
