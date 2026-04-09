@@ -1,0 +1,450 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '../styles/techpotli.css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* High-Tech, Modern Design System */
+/* Sleek, Dark-First, Glassmorphism & Cyber-vibrant accents */
+
+:root {
+  /* Font variables (offline-safe; used across components) */
+  --font-geist-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-script: ui-rounded, "Segoe UI", system-ui, cursive;
+
+  --hero-accent: #ffc700;
+  /* Techpotli-inspired light surfaces + purple / amber accents */
+  --background: oklch(0.99 0.005 240);
+  --foreground: oklch(0.15 0.01 240);
+  
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.01 240);
+  
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.01 240);
+  
+  /* Primary: purple (Techpotli-style) */
+  --primary: oklch(0.52 0.24 290);
+  --primary-foreground: oklch(1 0 0);
+  
+  /* Secondary: Deep Navy #101921 */
+  --secondary: oklch(0.2 0.01 240);
+  --secondary-foreground: oklch(1 0 0);
+  
+  --muted: oklch(0.96 0.01 240);
+  --muted-foreground: oklch(0.45 0.01 240);
+  
+  /* Accent: amber CTA */
+  --accent: oklch(0.86 0.17 88);
+  --accent-foreground: oklch(0.2 0.02 260);
+  
+  --success: oklch(0.65 0.15 150);
+  --success-foreground: oklch(1 0 0);
+  
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  
+  --border: oklch(0.9 0.01 240);
+  --input: oklch(0.9 0.01 240);
+  --ring: oklch(0.86 0.17 88);
+  
+  --radius: 0.75rem; /* Clean, slightly rounded */
+}
+
+.dark {
+  /* Applicare Dark Theme Extension */
+  --background: oklch(0.15 0.01 240); /* Deep Navy Background */
+  --foreground: oklch(0.98 0.005 240);
+  
+  --card: oklch(0.2 0.01 240);
+  --card-foreground: oklch(0.98 0.005 240);
+  
+  --popover: oklch(0.18 0.01 240);
+  --popover-foreground: oklch(0.98 0.005 240);
+  
+  --primary: oklch(0.58 0.22 290);
+  --primary-foreground: oklch(1 0 0);
+  
+  --secondary: oklch(0.25 0.01 240);
+  --secondary-foreground: oklch(1 0 0);
+  
+  --muted: oklch(0.25 0.01 240);
+  --muted-foreground: oklch(0.7 0.01 240);
+  
+  --accent: oklch(0.8 0.16 80);
+  --accent-foreground: oklch(0.15 0.01 240);
+  
+  --success: oklch(0.65 0.15 150);
+  --success-foreground: oklch(0.15 0.01 240);
+  
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(0.98 0.005 240);
+  
+  --border: oklch(0.25 0.01 240);
+  --input: oklch(0.25 0.01 240);
+  --ring: oklch(0.86 0.17 88);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  html {
+    font-size: 16px; /* Reset to standard from senior-friendly */
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground selection:bg-primary/30;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Subtle, modern glassmorphism */
+  .glass {
+    @apply bg-white/90 backdrop-blur-md border border-black/5 shadow-sm;
+  }
+  
+  .glass-dark {
+    @apply bg-black/60 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+
+  .cyber-glow {
+    @apply shadow-[0_0_20px_rgba(var(--primary),0.1)] border-primary/20;
+  }
+
+  /* Uiverse.io Card Style - Exact Match to Image */
+  .uiverse-card {
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 4px;
+    border: none;
+    color: rgb(20, 20, 20);
+  }
+  
+  .dark .uiverse-card {
+    background: rgb(40, 40, 40);
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) 0px 10px 20px -3px, rgba(0, 0, 0, 0.6) 0px -4px 0px inset;
+    border-radius: 4px;
+    color: white;
+  }
+
+  /* Rounded Applicare Button Style */
+  .uiverse-button {
+    background: var(--primary);
+    border: none;
+    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 160px;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px oklch(0.52 0.24 290 / 0.35);
+  }
+
+  .uiverse-button span {
+    display: inline-block;
+  }
+
+  .uiverse-button:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px oklch(0.52 0.24 290 / 0.45);
+    background: color-mix(in srgb, var(--primary) 90%, black);
+  }
+
+  /* Book Service / contact form — amber-yellow CTA (matches header) */
+  .uiverse-button.book-service-submit {
+    background: #f5c518 !important;
+    color: #101921 !important;
+    box-shadow: 0 4px 16px rgba(245, 197, 24, 0.35);
+  }
+
+  .uiverse-button.book-service-submit:hover {
+    color: #101921 !important;
+    transform: none;
+    background: #f5c518 !important;
+    box-shadow: 0 4px 16px rgba(245, 197, 24, 0.35);
+  }
+
+  /* Uiverse.io Grid Loader Style */
+  .loader {
+    --color: var(--primary);
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+
+  .loader span {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color);
+    animation: keyframes-blink 0.6s alternate infinite linear;
+  }
+
+  .loader span:nth-child(1) { animation-delay: 0ms; }
+  .loader span:nth-child(2) { animation-delay: 200ms; }
+  .loader span:nth-child(3) { animation-delay: 300ms; }
+  .loader span:nth-child(4) { animation-delay: 400ms; }
+  .loader span:nth-child(5) { animation-delay: 500ms; }
+  .loader span:nth-child(6) { animation-delay: 600ms; }
+
+  @keyframes keyframes-blink {
+    0% {
+      opacity: 0.3;
+      transform: scale(0.5) rotate(5deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .dark .loader {
+    --color: var(--primary);
+  }
+
+  /* Chat Bot Style from Uiverse.io */
+  .chat-bot-card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans);
+  }
+
+  .chat-bot-header {
+    background-color: #141414;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .chat-bot-window {
+    height: 300px;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chat-bot-messages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .chat-bot-message {
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 85%;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .chat-bot-message.user {
+    background-color: #141414;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+  }
+
+  .chat-bot-message.bot {
+    background-color: #e4e4e7;
+    color: #141414;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+  }
+
+  .chat-bot-input-area {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+  }
+
+  .chat-bot-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+    background: transparent;
+    color: #000;
+  }
+
+  .chat-bot-send {
+    border: none;
+    outline: none;
+    background-color: #141414;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  .chat-bot-send:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .chat-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: #141414;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 1001;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .chat-toggle-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Modern High-Tech UI Elements */
+  .bento-grid {
+    @apply grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px];
+  }
+  
+  .glow {
+    position: relative;
+  }
+  
+  .glow::after {
+    content: '';
+    @apply absolute inset-0 -z-10 blur-3xl opacity-30 bg-primary rounded-full;
+  }
+  
+  .hero-gradient {
+    @apply absolute inset-0 -z-10;
+    background: radial-gradient(circle at 50% 50%, oklch(0.6 0.22 250 / 0.15), transparent 60%),
+                radial-gradient(circle at 80% 20%, oklch(0.65 0.2 290 / 0.1), transparent 50%);
+  }
+  
+  .mesh-bg {
+    background-image: 
+      radial-gradient(at 0% 0%, oklch(0.6 0.2 250 / 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, oklch(0.65 0.2 290 / 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, oklch(0.6 0.2 250 / 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, oklch(0.65 0.2 290 / 0.1) 0px, transparent 50%);
+  }
+
+  /* --- Fooror Header Styles --- */
+  
+  /* Button Text Mask Animation */
+  .btn-txt-mask {
+    display: block;
+    height: 1.2em;
+    overflow: hidden;
+  }
+  .btn-txt {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-out;
+  }
+  /* Progressive Blur Effect */
+  .progressive-blur {
+    backdrop-filter: blur(20px);
+    mask-image: linear-gradient(to bottom, black, transparent);
+  }
+  .menu-bg {
+    background: radial-gradient(circle at center, rgba(30, 41, 59, 0.7) 0%, hsl(var(--background)) 100%);
+  }
+  /* Service Menu Shadows */
+  #services-menu {
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px oklch(var(--primary) / 0.5);
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
