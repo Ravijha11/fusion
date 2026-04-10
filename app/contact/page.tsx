@@ -13,7 +13,6 @@ import { motion } from 'framer-motion'
 import { trackPhoneClick } from '@/lib/tracking'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
 import { ContactMessageForm } from '@/components/contact-message-form'
-import { Facebook, Twitter, Youtube, Linkedin, Instagram } from 'lucide-react'
 
 const PHONE_NUMBER = '555-123-4567'
 const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
@@ -79,7 +78,7 @@ export default function ContactPage() {
                     {PHONE_NUMBER}
                   </a>
                   <p className="mt-6 text-sm font-medium text-gray-500">
-                    For a quick response, call during business hours (see below). If we miss you, leave a message or use email.
+                    We typically respond during business hours (see below). If we miss you, leave a message or email us.
                   </p>
                 </div>
 
@@ -134,26 +133,6 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="rounded-xl bg-white border border-gray-200 p-5">
-                      <div className="flex items-center justify-center gap-6 text-gray-500">
-                        <a href="#" aria-label="Facebook" className="hover:text-[#101921] transition-colors">
-                          <Facebook className="h-5 w-5" aria-hidden />
-                        </a>
-                        <a href="#" aria-label="X" className="hover:text-[#101921] transition-colors">
-                          <Twitter className="h-5 w-5" aria-hidden />
-                        </a>
-                        <a href="#" aria-label="YouTube" className="hover:text-[#101921] transition-colors">
-                          <Youtube className="h-5 w-5" aria-hidden />
-                        </a>
-                        <a href="#" aria-label="LinkedIn" className="hover:text-[#101921] transition-colors">
-                          <Linkedin className="h-5 w-5" aria-hidden />
-                        </a>
-                        <a href="#" aria-label="Instagram" className="hover:text-[#101921] transition-colors">
-                          <Instagram className="h-5 w-5" aria-hidden />
-                        </a>
-                      </div>
-                    </div>
-
                     <div className="rounded-xl border border-yellow-200 bg-[#f6c95a] p-5 flex items-center gap-4">
                       <div className="h-12 w-12 rounded-lg bg-white/70 flex items-center justify-center overflow-hidden">
                         <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-[#101921] font-black">
@@ -168,7 +147,7 @@ export default function ContactPage() {
                         >
                           {PHONE_NUMBER}
                         </a>
-                        <p className="text-sm font-medium text-[#101921]/80">Consult with an expert</p>
+                        <p className="text-sm font-medium text-[#101921]/80">Scheduling &amp; service questions</p>
                       </div>
                     </div>
 
@@ -206,6 +185,14 @@ export default function ContactPage() {
               We use qualified technicians and standard background and insurance checks where required. Information you submit is sent over HTTPS and handled as described in our{' '}
               <a href="/privacy-policy" className="text-[#F15A24] hover:underline font-bold">
                 Privacy Policy
+              </a>
+              ,{' '}
+              <a href="/terms" className="text-[#F15A24] hover:underline font-bold">
+                Terms
+              </a>
+              , and{' '}
+              <a href="/refund" className="text-[#F15A24] hover:underline font-bold">
+                Refund Policy
               </a>
               .
             </p>

@@ -15,9 +15,9 @@ const HERO_IMAGES = [
 
 const HERO_LINES = [
   'Appliance repair booking when your kitchen or laundry room stops cold.',
-  'Licensed technicians, clear pricing, and honest diagnostics you can trust.',
+  'Qualified technicians, clear starting prices, and written estimates before repair work begins.',
   'Refrigerators, washers, ovens, dishwashers, TVs, and more — we come to you.',
-  'Book online or call — most visits include a full assessment and next-step quote.',
+  'Book online or call — visits typically include assessment and a written estimate for approved work.',
 ]
 
 const ROTATE_INTERVAL_MS = 3500

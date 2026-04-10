@@ -102,8 +102,8 @@ export function FusionRowsQuote() {
                 <div className="ver-wrap gap-3">
                   <p className="quote-icon">&ldquo;</p>
                   <p className="txt-56 quote">
-                    We fix appliances the right way: honest timelines, upfront pricing, and technicians
-                    who respect your home.
+                    We focus on clear scheduling windows, written estimates after diagnosis, and
+                    technicians who respect your home.
                   </p>
                   <div className="hor-wrap gap-2">
                     <div

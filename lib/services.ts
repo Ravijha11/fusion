@@ -30,7 +30,7 @@ export const services: ServiceData[] = [
     slug: 'refrigerator',
     name: 'Refrigerator Repair',
     shortName: 'Refrigerator',
-    description: 'Expert refrigerator repair for all makes and models. Same-day options when available.',
+    description: 'Expert refrigerator repair for all makes and models. Earlier slots may be available; not guaranteed.',
     longDescription:
       'We handle common refrigerator issues, from cooling problems to leaks and ice maker faults. We service major brands and confirm parts and scheduling before repairs begin.',
     heroHeadline: 'Refrigerator Repair — New York',
@@ -46,13 +46,13 @@ export const services: ServiceData[] = [
       'Light not turning on',
     ],
     steps: [
-      { title: 'Book Online or Call', description: 'Schedule your visit in minutes. Same-day options may be available.' },
+      { title: 'Book Online or Call', description: 'Schedule your visit in minutes. Earlier slots may be available; not guaranteed.' },
       { title: 'Diagnosis & Estimate', description: 'The technician diagnoses the issue and provides a written estimate before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If you approve the estimate, the technician completes the repair when possible.' },
     ],
     seoTitle: 'Refrigerator Repair — New York | DigitalBull',
     seoDescription:
-      'Expert refrigerator repair service in New York. Same-day options when available. Qualified technicians (licensing where required). Starting at $89. Call 555-123-4567.',
+      'Expert refrigerator repair service in New York. Earlier slots may be available; not guaranteed. Qualified technicians (licensing where required). Starting at $89. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior woman smiling in kitchen while a friendly uniformed technician kneels repairing a stainless refrigerator, clear tools, bright natural light, US apartment, warm tones.',
       stepPanels: [
@@ -82,13 +82,13 @@ export const services: ServiceData[] = [
       'Error codes displayed',
     ],
     steps: [
-      { title: 'Book Online or Call', description: 'Schedule your visit in minutes. Same-day options may be available.' },
+      { title: 'Book Online or Call', description: 'Schedule your visit in minutes. Earlier slots may be available; not guaranteed.' },
       { title: 'Diagnosis & Estimate', description: 'After diagnosis, you receive a written estimate for parts and labor before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If you approve the estimate, the technician proceeds with the repair based on parts availability.' },
     ],
     seoTitle: 'Washing Machine Repair — New York | DigitalBull',
     seoDescription:
-      'Professional washing machine repair in New York. All brands serviced. Same-day options when available. Starting at $79. Call 555-123-4567.',
+      'Professional washing machine repair in New York. All brands serviced. Earlier slots may be available; not guaranteed. Starting at $79. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior man watching technician fix front-load washer, technician shows part, laundry room tidy, friendly interaction, clear expressions.',
       stepPanels: [
@@ -103,7 +103,7 @@ export const services: ServiceData[] = [
     slug: 'dryer',
     name: 'Dryer Repair',
     shortName: 'Dryer',
-    description: 'Fast dryer repair service. Gas and electric models.',
+    description: 'Dryer repair for gas and electric models.',
     longDescription: 'We repair all dryer types including gas, electric, and ventless models. Safety is our priority with proper ventilation checks included.',
     heroHeadline: 'Dryer Repair — New York',
     startingPrice: '$79',
@@ -124,7 +124,7 @@ export const services: ServiceData[] = [
     ],
     seoTitle: 'Dryer Repair — New York | DigitalBull',
     seoDescription:
-      'Expert dryer repair in New York. Gas and electric models. Same-day options when available. Starting at $79. Call 555-123-4567.',
+      'Expert dryer repair in New York. Gas and electric models. Earlier slots may be available; not guaranteed. Starting at $79. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior woman relieved as technician replaces dryer belt, dryer door open, lint trap visible, safe posture, bright laundry room.',
       stepPanels: [
@@ -160,7 +160,7 @@ export const services: ServiceData[] = [
     ],
     seoTitle: 'Oven & Range Repair — New York | DigitalBull',
     seoDescription:
-      'Professional oven and range repair in New York. Gas and electric. Same-day options when available. Starting at $89. Call 555-123-4567.',
+      'Professional oven and range repair in New York. Gas and electric. Earlier slots may be available; not guaranteed. Starting at $89. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior couple watching technician test oven temperature with thermometer, kitchen stove in background, safety emphasis.',
       stepPanels: [
@@ -175,8 +175,8 @@ export const services: ServiceData[] = [
     slug: 'dishwasher',
     name: 'Dishwasher Repair',
     shortName: 'Dishwasher',
-    description: 'Dishwasher repair for all major brands. Same-day options when available.',
-    longDescription: 'We fix dishwashers that won\'t clean, won\'t drain, or have other issues. Most repairs completed in a single visit.',
+    description: 'Dishwasher repair for all major brands. Earlier slots may be available; not guaranteed.',
+    longDescription: 'We fix dishwashers that won\'t clean, won\'t drain, or have other issues. Many repairs can be completed in one visit when parts are available.',
     heroHeadline: 'Dishwasher Repair — New York',
     startingPrice: '$79',
     commonFaults: [
@@ -190,13 +190,13 @@ export const services: ServiceData[] = [
       'Bad odors',
     ],
     steps: [
-      { title: 'Book Repair', description: 'Schedule online or by phone. Same-day options may be available.' },
+      { title: 'Book Repair', description: 'Schedule online or by phone. Earlier slots may be available; not guaranteed.' },
       { title: 'Diagnosis & Estimate', description: 'After diagnosis, you receive a written estimate for parts and labor before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If you approve the estimate, the technician completes the repair when possible.' },
     ],
     seoTitle: 'Dishwasher Repair — New York | DigitalBull',
     seoDescription:
-      'Expert dishwasher repair in New York. All brands serviced. Same-day options when available. Starting at $79. Call 555-123-4567.',
+      'Expert dishwasher repair in New York. All brands serviced. Earlier slots may be available; not guaranteed. Starting at $79. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior woman smiling as technician replaces dishwasher spray arm, clean dishes visible, kitchen sink area tidy.',
       stepPanels: [
@@ -226,13 +226,13 @@ export const services: ServiceData[] = [
       'Display issues',
     ],
     steps: [
-      { title: 'Schedule Service', description: 'Quick booking online or by phone.' },
+      { title: 'Schedule Service', description: 'Book online or by phone.' },
       { title: 'Diagnosis & Estimate', description: 'The technician diagnoses the issue and shares a written estimate before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If approved, the technician completes the repair following standard safety practices.' },
     ],
     seoTitle: 'Microwave Repair — New York | DigitalBull',
     seoDescription:
-      'Professional microwave repair in New York. Safe service. Same-day options when available. Starting at $69. Call 555-123-4567.',
+      'Professional microwave repair in New York. Safe service. Earlier slots may be available; not guaranteed. Starting at $69. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior man using microwave after repair, technician points to simple control panel, large readable buttons.',
       stepPanels: [
@@ -248,7 +248,7 @@ export const services: ServiceData[] = [
     name: 'Air Conditioner Repair',
     shortName: 'AC',
     description: 'AC repair and maintenance. Window and central units.',
-    longDescription: 'Stay cool with our fast AC repair service. We service window units, central air systems, and mini-splits.',
+    longDescription: 'AC repair for window units, central air systems, and mini-splits.',
     heroHeadline: 'Air Conditioner Repair — New York',
     startingPrice: '$99',
     commonFaults: [
@@ -262,13 +262,13 @@ export const services: ServiceData[] = [
       'Poor airflow',
     ],
     steps: [
-      { title: 'Book AC Service', description: 'Schedule your repair quickly.' },
+      { title: 'Book AC Service', description: 'Request service online or by phone.' },
       { title: 'Full Inspection', description: 'Technician checks all components thoroughly.' },
       { title: 'Cool Comfort', description: 'Your home is comfortable again.' },
     ],
     seoTitle: 'Air Conditioner Repair — New York | DigitalBull',
     seoDescription:
-      'Expert AC repair in New York. Window and central units. Same-day options when available. Starting at $99. Call 555-123-4567.',
+      'Expert AC repair in New York. Window and central units. Earlier slots may be available; not guaranteed. Starting at $99. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior woman pointing at wall AC while technician on ladder outside services unit, safety harness, clear outdoor home setting.',
       stepPanels: [
@@ -299,12 +299,12 @@ export const services: ServiceData[] = [
     ],
     steps: [
       { title: 'Schedule Repair', description: 'Book online or call us.' },
-      { title: 'Expert Diagnosis', description: 'Technician diagnoses the issue quickly.' },
+      { title: 'Expert Diagnosis', description: 'Technician diagnoses the issue during the visit.' },
       { title: 'Picture Perfect', description: 'Enjoy your favorite shows again.' },
     ],
     seoTitle: 'Television Repair — New York | DigitalBull',
     seoDescription:
-      'Professional TV repair in New York. All brands and types. Same-day options when available. Starting at $79. Call 555-123-4567.',
+      'Professional TV repair in New York. All brands and types. Earlier slots may be available; not guaranteed. Starting at $79. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior couple watching technician adjust TV settings, remote in hand, clear before/after brightness.',
       stepPanels: [
@@ -340,7 +340,7 @@ export const services: ServiceData[] = [
     ],
     seoTitle: 'Computer Repair — New York | DigitalBull',
     seoDescription:
-      'Expert computer and laptop repair in New York. All brands. Same-day options when available. Starting at $69. Call 555-123-4567.',
+      'Expert computer and laptop repair in New York. All brands. Earlier slots may be available; not guaranteed. Starting at $69. Call 555-123-4567.',
     imagePrompts: {
       hero: 'Senior man handing laptop to friendly technician at home desk, technician explains with simple gestures, calm environment.',
       stepPanels: [

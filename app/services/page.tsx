@@ -13,7 +13,7 @@ const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
 export const metadata: Metadata = {
   title: 'Appliance Repair Services',
   description:
-    'Professional appliance repair services in New York. We repair refrigerators, washing machines, dryers, ovens, dishwashers, TVs, and more. Same-day options when available.',
+    'Professional appliance repair services in New York. We repair refrigerators, washing machines, dryers, ovens, dishwashers, TVs, and more. Starting prices and written estimates before repair work.',
   alternates: {
     canonical: '/services',
   },
@@ -38,7 +38,7 @@ export default function ServicesPage() {
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto font-medium">
               Choose your appliance category to see common issues and starting prices for the service call &amp; diagnosis.
-              Same-day options may be available depending on scheduling.
+              Earlier appointment windows may be available depending on scheduling (not guaranteed).
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">

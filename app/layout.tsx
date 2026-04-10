@@ -14,8 +14,14 @@ export const metadata: Metadata = {
     template: '%s | DigitalBull',
   },
   description:
-    'Licensed appliance repair in the New York area: refrigerators, laundry, cooking appliances, and more. Clear pricing and same-day options when available.',
-  keywords: ['appliance repair', 'New York', 'refrigerator repair', 'washing machine repair', 'advanced tech', 'same-day service', 'DigitalBull'],
+    'Licensed appliance repair in the New York area: refrigerators, laundry, cooking appliances, and more. Clear starting prices and written estimates before repair work.',
+  keywords: [
+    'appliance repair',
+    'New York',
+    'refrigerator repair',
+    'washing machine repair',
+    'DigitalBull',
+  ],
   authors: [{ name: 'DigitalBull' }],
   creator: 'DigitalBull',
   publisher: 'DigitalBull',
@@ -30,7 +36,7 @@ export const metadata: Metadata = {
     siteName: 'DigitalBull',
     title: 'DigitalBull — Advanced Appliance Restoration',
     description:
-      'Licensed appliance repair in the New York area with clear pricing and same-day options when available.',
+      'Licensed appliance repair in the New York area with clear starting prices and written estimates before repair work.',
     images: [
       {
         url: '/og-image.jpg',
@@ -43,7 +49,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'DigitalBull — Advanced Appliance Restoration',
-    description: 'Precision engineering and expert appliance restoration in New York.',
+    description:
+      'Appliance repair booking in New York with qualified technicians and clear starting prices.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -84,7 +91,8 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://www.digitalbull.co.in/#organization',
   name: 'DigitalBull',
-  description: 'Precision engineering and expert appliance restoration in New York.',
+  description:
+    'Appliance repair booking in New York with qualified technicians and clear starting prices.',
   url: 'https://www.digitalbull.co.in',
   telephone: '+1-555-123-4567',
   email: 'support@digitalbull.co.in',

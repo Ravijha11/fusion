@@ -32,7 +32,7 @@ const steps = [
     icon: CalendarCheck,
     title: 'Book Online or Call',
     description:
-      'Send a booking request in a few minutes. Choose a preferred date. Same-day appointments may be available depending on availability.',
+      'Send a booking request in a few minutes. Choose a preferred date. Earlier appointment windows may be available depending on scheduling (not guaranteed).',
     details: [
       'Fill out our simple online form',
       'Or call us at 555-123-4567',
@@ -56,12 +56,12 @@ const steps = [
     number: 3,
     icon: Wrench,
     title: 'Technician Arrives & Diagnoses',
-    description: 'Your technician arrives at your home with tools and common parts. They diagnose the problem and give you a clear quote before starting.',
+    description: 'Your technician arrives at your home with tools and common parts. They diagnose the issue and provide a written estimate before any repair work begins.',
     details: [
       'Technician arrives in scheduled window',
       'Full inspection of your appliance',
       'Clear explanation of the problem',
-      'Upfront quote before any work begins',
+      'Written estimate before repair work begins',
     ],
   },
   {
@@ -83,7 +83,7 @@ const faqs = [
   {
     question: 'How quickly can I get service?',
     answer:
-      'Same-day or next-day appointments may be available depending on technician availability. When you call or book, we will share the earliest available options.',
+      'Earlier or next-day windows may be available depending on technician availability (not guaranteed). When you call or book, we share the earliest options we can offer.',
   },
   {
     question: 'How much will my repair cost?',
@@ -219,7 +219,7 @@ export default function HowItWorksPage() {
                 </div>
                 <h3 className="mt-2 text-xl font-semibold text-[#101921]">Scheduling options</h3>
                 <p className="mt-3 text-gray-600">
-                  Same-day and next-day appointments may be available depending on technician availability.
+                  Earlier or next-day windows may be available depending on technician availability (not guaranteed).
                 </p>
               </div>
               
