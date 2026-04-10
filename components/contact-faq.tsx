@@ -24,8 +24,8 @@ const faqs = [
       "We provide clear pricing and a written estimate after diagnosis. Final pricing depends on the specific issue, parts required, and labor."
   },
   {
-    question: "Do you offer same-day repair services?",
-    answer: "Same-day appointments may be available depending on technician availability and scheduling. When you call or submit a request, we’ll share the earliest available options."
+    question: "Can I get an appointment on short notice?",
+    answer: "Earlier appointment windows may be available depending on technician availability and scheduling (not guaranteed). When you call or submit a request, we’ll share the earliest options we can offer."
   },
   {
     question: "What brands do you service?",
@@ -82,8 +82,9 @@ export function ContactFaqSection() {
                     href={PHONE_HREF}
                     className="inline-flex items-center justify-center gap-2"
                     onClick={() => trackPhoneClick()}
+                    aria-label="Call our business phone"
                   >
-                    Call us <ArrowRight className="w-5 h-5" aria-hidden />
+                    Call <ArrowRight className="w-5 h-5" aria-hidden />
                   </a>
                 </Button>
               </div>

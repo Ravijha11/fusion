@@ -28,9 +28,9 @@ export const metadata: Metadata = {
 const values = [
   {
     icon: Clock,
-    title: 'Fast Response',
+    title: 'Flexible scheduling',
     description:
-      'We offer same-day and next-day appointments when availability allows. We share realistic arrival windows when you contact us.',
+      'Earlier or next-day windows may be available when scheduling allows (not guaranteed). We share estimated arrival windows when you contact us.',
   },
   {
     icon: Shield,

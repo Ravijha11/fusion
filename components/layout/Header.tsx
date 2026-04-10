@@ -312,10 +312,10 @@ export function Header() {
                             className="text-[10px] font-bold uppercase tracking-widest"
                             style={{ color: CTA_ORANGE }}
                           >
-                            Priority support
+                            Scheduling help
                           </span>
                           <p className="text-xs font-medium text-slate-600">
-                            Fast response when available
+                            We confirm options during business hours
                           </p>
                         </div>
                       </div>

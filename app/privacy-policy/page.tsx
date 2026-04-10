@@ -5,14 +5,14 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'Privacy Policy for our appliance repair booking service. Learn how we collect, use, and protect your personal information.',
+    'DigitalBull privacy policy: how we collect, use, and protect personal information for appliance repair booking, cookies, and Microsoft Advertising (UET).',
   alternates: {
     canonical: '/privacy-policy',
   },
 }
 
 export default function PrivacyPolicyPage() {
-  const lastUpdated = 'January 1, 2024'
+  const lastUpdated = 'April 1, 2026'
 
   return (
     <>
@@ -36,7 +36,10 @@ export default function PrivacyPolicyPage() {
                 <strong>DigitalBull</strong> (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates this website and
                 booking service at <strong>www.digitalbull.co.in</strong> and is committed to protecting your privacy.
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when
-                you visit our site and use our services.
+                you visit our site and use our services. Pricing and fees discussed on this site are
+                generally quoted in <strong>U.S. dollars (USD)</strong>. Our primary service coordination
+                described on this site targets the <strong>United States</strong> (New York metropolitan
+                area and nearby communities) unless we confirm otherwise when you contact us.
               </p>
             </section>
 
@@ -243,6 +246,11 @@ export default function PrivacyPolicyPage() {
               <p className="text-foreground leading-relaxed mt-4">
                 To exercise these rights, please contact us using the information below.
               </p>
+              <p className="text-foreground leading-relaxed mt-4">
+                <strong>Canada:</strong> If you are in Canada, provincial privacy laws (for example
+                in British Columbia, Alberta, or Quebec) may provide additional rights or requirements.
+                You may also file a complaint with your provincial privacy commissioner where applicable.
+              </p>
             </section>
 
             <section>
@@ -254,7 +262,18 @@ export default function PrivacyPolicyPage() {
                 please contact us at:
               </p>
               <address className="not-italic mt-4 text-foreground">
-                <p><strong>Appliance repair service</strong></p>
+                <p><strong>DigitalBull</strong></p>
+                <p>
+                  Website:{' '}
+                  <a
+                    href="https://www.digitalbull.co.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline-offset-2 hover:underline"
+                  >
+                    www.digitalbull.co.in
+                  </a>
+                </p>
                 <p>Email: privacy@digitalbull.co.in</p>
                 <p>Phone: 555-123-4567</p>
               </address>
@@ -272,10 +291,20 @@ export default function PrivacyPolicyPage() {
             </section>
           </div>
           
-          <div className="mt-12 border-t border-border pt-8">
-            <Link 
+          <div className="mt-12 space-y-4 border-t border-border pt-8 text-sm text-muted-foreground">
+            <p>
+              Related:{' '}
+              <Link href="/terms" className="font-semibold text-primary underline-offset-2 hover:underline">
+                Terms of Service
+              </Link>
+              {' · '}
+              <Link href="/refund" className="font-semibold text-primary underline-offset-2 hover:underline">
+                Refund Policy
+              </Link>
+            </p>
+            <Link
               href="/"
-              className="text-primary underline underline-offset-4 hover:text-primary/80"
+              className="inline-block text-primary underline underline-offset-4 hover:text-primary/80"
             >
               &larr; Back to Home
             </Link>

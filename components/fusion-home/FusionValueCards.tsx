@@ -26,15 +26,15 @@ export function FusionValueCards() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          We go{' '}
+          Thorough{' '}
           <span
             className="font-bold text-amber-400"
             style={{ fontFamily: 'var(--font-script), system-ui, sans-serif' }}
           >
-            further
+            diagnostics
           </span>
           <br />
-          <span className="font-bold">than a quick fix</span>
+          <span className="font-bold">and clear next steps</span>
         </motion.h2>
         <motion.p
           className="mt-6 text-center text-lg font-semibold text-white sm:text-2xl"
@@ -43,7 +43,8 @@ export function FusionValueCards() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          Detailed diagnostics, quality parts, and clear communication from booking to completion.
+          Detailed diagnostics, estimates that list parts and labor when applicable, and clear
+          communication from booking to completion.
         </motion.p>
       </div>
     </section>

@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils'
 const faqs = [
   {
     q: 'How quickly can you come out?',
-    a: 'We offer same-day and next-day appointments across much of the New York metro when parts and technician availability allow. When you call or book online, we share realistic arrival windows.',
+    a: 'Appointment timing depends on technician availability and parts. Earlier or next-day windows may be available in parts of the New York metro (not guaranteed). When you call or book online, we share estimated arrival windows.',
   },
   {
     q: 'How does pricing work?',

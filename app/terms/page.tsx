@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024'
+  const lastUpdated = 'April 1, 2026'
 
   return (
     <>
@@ -103,9 +103,15 @@ export default function TermsPage() {
                 Cancellation Policy
               </h2>
               <p className="text-foreground leading-relaxed">
-                You may cancel or reschedule your appointment by calling us at least 2 hours 
-                before your scheduled appointment time. Cancellations made with less than 
-                2 hours notice may be subject to a cancellation fee.
+                You may cancel or reschedule your appointment by contacting us at least{' '}
+                <strong>24 hours</strong> before the scheduled appointment window, unless a different
+                notice period was confirmed in writing for your booking. Cancellations with less
+                notice may be subject to a cancellation fee. For refund eligibility related to
+                service fees and repairs, see our{' '}
+                <Link href="/refund" className="text-primary font-semibold underline-offset-2 hover:underline">
+                  Refund Policy
+                </Link>
+                .
               </p>
             </section>
 
@@ -172,9 +178,10 @@ export default function TermsPage() {
                 Governing Law
               </h2>
               <p className="text-foreground leading-relaxed">
-                These Terms of Service shall be governed by and construed in accordance 
-                with the laws of the State of New York, without regard to its conflict 
-                of law provisions.
+                These Terms of Service shall be governed by and construed in accordance with the
+                laws of the State of New York, without regard to its conflict-of-law provisions.
+                If you are located in Canada, mandatory consumer protection rules in your province
+                or territory may also apply where they cannot be waived by contract.
               </p>
             </section>
 
@@ -199,16 +206,37 @@ export default function TermsPage() {
               </p>
               <address className="not-italic mt-4 text-foreground">
                 <p><strong>DigitalBull</strong></p>
+                <p>
+                  Website:{' '}
+                  <a
+                    href="https://www.digitalbull.co.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline-offset-2 hover:underline"
+                  >
+                    www.digitalbull.co.in
+                  </a>
+                </p>
                 <p>Email: legal@digitalbull.co.in</p>
                 <p>Phone: 555-123-4567</p>
               </address>
             </section>
           </div>
           
-          <div className="mt-12 border-t border-border pt-8">
-            <Link 
+          <div className="mt-12 space-y-4 border-t border-border pt-8 text-sm text-muted-foreground">
+            <p>
+              Related:{' '}
+              <Link href="/privacy-policy" className="font-semibold text-primary underline-offset-2 hover:underline">
+                Privacy Policy
+              </Link>
+              {' · '}
+              <Link href="/refund" className="font-semibold text-primary underline-offset-2 hover:underline">
+                Refund Policy
+              </Link>
+            </p>
+            <Link
               href="/"
-              className="text-primary underline underline-offset-4 hover:text-primary/80"
+              className="inline-block text-primary underline underline-offset-4 hover:text-primary/80"
             >
               &larr; Back to Home
             </Link>

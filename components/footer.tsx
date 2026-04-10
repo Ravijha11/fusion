@@ -61,8 +61,16 @@ export function Footer() {
             </Link>
 
             <p className="mt-6 text-[15px] leading-relaxed text-white/85">
-              Licensed appliance repair in the New York area. Clear pricing on every service page —
-              see our{' '}
+              Licensed appliance repair in the New York metropolitan area. Clear starting prices on
+              service pages. Read our{' '}
+              <Link href="/privacy-policy" className="font-semibold text-amber-200 underline-offset-2 hover:underline">
+                Privacy Policy
+              </Link>
+              ,{' '}
+              <Link href="/terms" className="font-semibold text-amber-200 underline-offset-2 hover:underline">
+                Terms
+              </Link>
+              , and{' '}
               <Link href="/refund" className="font-semibold text-amber-200 underline-offset-2 hover:underline">
                 Refund Policy
               </Link>
@@ -104,7 +112,7 @@ export function Footer() {
                 <div className="rounded-full bg-white/10 p-2">
                   <MapPin className="h-4 w-4 text-primary" aria-hidden="true" />
                 </div>
-                <span className="mt-1">Serving all local areas</span>
+                <span className="mt-1">New York metro area &amp; nearby communities (USA)</span>
               </div>
             </div>
           </div>
@@ -166,9 +174,14 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-8 md:flex-row">
-          <p className="text-sm text-white/75">
-            &copy; {currentYear} DigitalBull. All rights reserved.
-          </p>
+          <div className="text-center text-sm text-white/75 md:text-left">
+            <p>&copy; {currentYear} DigitalBull. All rights reserved.</p>
+            <p className="mt-2 max-w-xl text-white/65">
+              Prices on this site are shown in <strong className="font-semibold text-white/80">U.S. dollars (USD)</strong>.
+              Service area: United States — New York metropolitan region and nearby communities unless
+              otherwise confirmed when you book.
+            </p>
+          </div>
           <div className="flex gap-6">
             <Link
               href="/privacy-policy"

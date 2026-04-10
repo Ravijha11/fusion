@@ -39,8 +39,9 @@ export function FusionFeaturedServices() {
                 </span>
               </h2>
               <p className="mt-6 text-lg font-medium leading-relaxed text-gray-700 sm:text-xl">
-                Clear starting prices on every service page — no surprise fees for the diagnostic
-                visit.
+                Starting prices for the service call and diagnosis are on each service page. The
+                technician explains parts and labor costs in a written estimate before repair work
+                begins.
               </p>
             </div>
           </motion.div>

@@ -261,7 +261,7 @@ export function BookingForm({ serviceType, serviceName, contactLayout }: Booking
                 <div className="flex flex-col justify-end pb-1">
                   <div className="flex items-center gap-2 p-4 rounded-xl bg-primary/5 border border-primary/20">
                     <Zap className="h-4 w-4 text-primary" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-primary">Same-day visits when available — ask when we call</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-primary">Short-notice visits may be possible — ask when we call (not guaranteed)</span>
                   </div>
                 </div>
               </div>

@@ -187,7 +187,7 @@ export default async function ServicePage({
                 <div className="mt-10 flex flex-wrap items-center gap-6 text-sm font-semibold text-white/80">
                   <div className="flex items-center gap-2">
                     <Clock className="h-5 w-5" aria-hidden="true" />
-                    <span>Same-day options when available</span>
+                    <span>Earlier slots may be available (not guaranteed)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Shield className="h-5 w-5" aria-hidden="true" />
@@ -394,7 +394,7 @@ export default async function ServicePage({
                 <div className="mt-8 space-y-4">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />
-                    <span className="text-lg text-foreground">Same-day appointments when available</span>
+                    <span className="text-lg text-foreground">Earlier appointment windows when available (not guaranteed)</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />

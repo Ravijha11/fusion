@@ -45,7 +45,7 @@ export function ChatBot({ serviceSlug }: ChatBotProps) {
         text: `${service?.name ?? 'This service'} price: Starting at ${service?.startingPrice ?? ''} (same as shown on our website).`,
         sender: 'bot',
       },
-      { text: `Call us: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`, sender: 'bot' },
+      { text: `Phone: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`, sender: 'bot' },
     ])
   }
 
@@ -65,8 +65,8 @@ export function ChatBot({ serviceSlug }: ChatBotProps) {
         services.find((s) => lowerMessage.includes(s.name.toLowerCase()))
 
       const botResponse = serviceMatch
-        ? `${serviceMatch.name} price: Starting at ${serviceMatch.startingPrice} (same as shown on our website).\nCall us: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`
-        : `Please choose a service using the buttons below.\nCall us: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`
+        ? `${serviceMatch.name} price: Starting at ${serviceMatch.startingPrice} (same as shown on our website).\nPhone: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`
+        : `Please choose a service using the buttons below.\nPhone: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`
 
       setMessages(prev => [...prev, { text: botResponse, sender: 'bot' }])
     }, 600)
