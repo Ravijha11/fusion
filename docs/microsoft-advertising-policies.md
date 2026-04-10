@@ -60,3 +60,5 @@ As an advertiser, it is your responsibility to comply with laws and regulations 
 - [x] Maintain the site free of pop-up ads, deceptive UI ("fake close buttons"), and ensure clean rendering across all viewport sizes.
 - [x] Avoid placeholder social links (`href="#"`) on contact pages; remove social sections until real URLs exist.
 - [x] Use neutral scheduling language (no implied immediate response); qualify timing with “not guaranteed” where needed.
+- [x] Keep **Terms**, **Refund**, and **Privacy** consistent (e.g. same cancellation notice period, same business name) and cross-link the three pages.
+- [x] Disclose **USD** pricing and primary **US service area** in the footer (and Privacy intro where helpful).
