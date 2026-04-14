@@ -198,7 +198,7 @@ export function BookingForm({ serviceType, serviceName, contactLayout }: Booking
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="555-123-4567"
+                    placeholder="Enter your phone number"
                     className="h-14 rounded-xl bg-white/5 border-white/10 focus:border-primary/50 transition-all font-bold"
                     aria-invalid={!!errors.phone}
                     {...register('phone')}

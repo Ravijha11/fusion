@@ -8,9 +8,10 @@ import { Button } from '@/components/ui/button'
 import { trackPhoneClick } from '@/lib/tracking'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import { COMPANY_NAME, PHONE_DISPLAY, PHONE_TEL } from '@/lib/site-config'
 
-const PHONE_NUMBER = '555-123-4567'
-const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
+const PHONE_NUMBER = PHONE_DISPLAY
+const PHONE_HREF = PHONE_TEL
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -38,14 +39,18 @@ export function Header() {
       {/* Top Utility Bar (Navy) */}
       <div className="hidden lg:flex w-full bg-secondary text-white py-2 px-8 justify-between items-center text-sm font-medium">
         <div className="flex items-center gap-6">
-          <a href={PHONE_HREF} className="flex items-center gap-2 hover:text-primary transition-colors">
-            <Phone className="h-4 w-4 text-primary" />
-            <span>Phone: {PHONE_NUMBER}</span>
-          </a>
-          <div className="h-4 w-px bg-white/20" />
+          {PHONE_NUMBER && PHONE_HREF ? (
+            <>
+              <a href={PHONE_HREF} className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>Phone: {PHONE_NUMBER}</span>
+              </a>
+              <div className="h-4 w-px bg-white/20" />
+            </>
+          ) : null}
           <div className="flex items-center gap-2">
             <ShieldCheck className="h-4 w-4 text-primary" />
-            <span>Licensed & Insured Technicians</span>
+            <span>Independent technicians (licensing where required)</span>
           </div>
         </div>
         <div className="flex items-center gap-4">
@@ -66,7 +71,7 @@ export function Header() {
             <div className="relative h-12 w-48 transition-transform">
               <Image
                 src="/Logo/digital-bull-logo-removebg-preview.png"
-                alt="DigitalBull logo"
+                alt={`${COMPANY_NAME} logo`}
                 fill
                 className="object-contain"
                 priority
@@ -136,7 +141,7 @@ export function Header() {
                   <div className="relative h-10 w-40">
                     <Image
                       src="/Logo/digital-bull-logo-removebg-preview.png"
-                      alt="DigitalBull logo"
+                      alt={`${COMPANY_NAME} logo`}
                       fill
                       className="object-contain"
                     />

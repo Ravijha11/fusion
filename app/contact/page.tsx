@@ -13,9 +13,10 @@ import { motion } from 'framer-motion'
 import { trackPhoneClick } from '@/lib/tracking'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
 import { ContactMessageForm } from '@/components/contact-message-form'
+import { EMAIL_SUPPORT, PHONE_DISPLAY, PHONE_TEL, SITE_HOST_DISPLAY, SITE_ORIGIN } from '@/lib/site-config'
 
-const PHONE_NUMBER = '555-123-4567'
-const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
+const PHONE_NUMBER = PHONE_DISPLAY
+const PHONE_HREF = PHONE_TEL
 
 export default function ContactPage() {
   return (
@@ -62,25 +63,28 @@ export default function ContactPage() {
                 </div>
 
                 {/* Primary Contact Card */}
-                <div className="rounded-[2rem] bg-gray-50 border border-gray-100 shadow-sm p-10 relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:rotate-12 transition-transform">
-                    <Phone className="h-32 w-32 text-[#101921]" />
-                  </div>
-                  <p className="text-sm font-bold uppercase tracking-widest text-[#F15A24] mb-4">Phone</p>
-                  <a
-                    href={PHONE_HREF}
-                    onClick={() => trackPhoneClick()}
-                    className="flex items-center gap-4 text-4xl md:text-5xl font-black text-[#101921] hover:text-[#F15A24] transition-colors tracking-tight"
-                  >
-                    <div className="p-3 rounded-2xl bg-[#F15A24] text-white shadow-lg shadow-[#F15A24]/30">
-                      <Phone className="h-8 w-8" />
+                {PHONE_NUMBER && PHONE_HREF ? (
+                  <div className="rounded-[2rem] bg-gray-50 border border-gray-100 shadow-sm p-10 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:rotate-12 transition-transform">
+                      <Phone className="h-32 w-32 text-[#101921]" />
                     </div>
-                    {PHONE_NUMBER}
-                  </a>
-                  <p className="mt-6 text-sm font-medium text-gray-500">
-                    We typically respond during business hours (see below). If we miss you, leave a message or email us.
-                  </p>
-                </div>
+                    <p className="text-sm font-bold uppercase tracking-widest text-[#F15A24] mb-4">Phone</p>
+                    <a
+                      href={PHONE_HREF}
+                      onClick={() => trackPhoneClick()}
+                      className="flex items-center gap-4 text-4xl md:text-5xl font-black text-[#101921] hover:text-[#F15A24] transition-colors tracking-tight"
+                    >
+                      <div className="p-3 rounded-2xl bg-[#F15A24] text-white shadow-lg shadow-[#F15A24]/30">
+                        <Phone className="h-8 w-8" />
+                      </div>
+                      {PHONE_NUMBER}
+                    </a>
+                    <p className="mt-6 text-sm font-medium text-gray-500">
+                      We typically respond during business hours (see below). If we miss you, leave a
+                      message or email us.
+                    </p>
+                  </div>
+                ) : null}
 
                 {/* Screenshot-style left panel cards */}
                 <div className="rounded-2xl border border-gray-200 bg-[#f7f7fb] overflow-hidden">
@@ -98,7 +102,7 @@ export default function ContactPage() {
                       </div>
                       <div className="min-w-0">
                         <p className="font-bold text-[#101921]">Service Area</p>
-                        <p className="text-sm text-gray-600">Full metro coverage and nearby communities</p>
+                        <p className="text-sm text-gray-600">New York metro area and nearby communities</p>
                       </div>
                     </div>
 
@@ -109,10 +113,10 @@ export default function ContactPage() {
                       <div className="min-w-0">
                         <p className="font-bold text-[#101921]">Email Address</p>
                         <a
-                          href="mailto:support@digitalbull.co.in"
+                          href={`mailto:${EMAIL_SUPPORT}`}
                           className="text-sm font-semibold text-gray-700 hover:text-[#F15A24] transition-colors break-all"
                         >
-                          support@digitalbull.co.in
+                          {EMAIL_SUPPORT}
                         </a>
                       </div>
                     </div>
@@ -123,33 +127,37 @@ export default function ContactPage() {
                       <div className="min-w-0">
                         <p className="font-bold text-[#101921]">Website</p>
                         <a
-                          href="https://www.digitalbull.co.in"
+                          href={SITE_ORIGIN}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm font-semibold text-gray-700 hover:text-[#F15A24] transition-colors break-all"
                         >
-                          www.digitalbull.co.in
+                          {SITE_HOST_DISPLAY}
                         </a>
                       </div>
                     </div>
 
-                    <div className="rounded-xl border border-yellow-200 bg-[#f6c95a] p-5 flex items-center gap-4">
-                      <div className="h-12 w-12 rounded-lg bg-white/70 flex items-center justify-center overflow-hidden">
-                        <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-[#101921] font-black">
-                          A
+                    {PHONE_NUMBER && PHONE_HREF ? (
+                      <div className="rounded-xl border border-yellow-200 bg-[#f6c95a] p-5 flex items-center gap-4">
+                        <div className="h-12 w-12 rounded-lg bg-white/70 flex items-center justify-center overflow-hidden">
+                          <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-[#101921] font-black">
+                            A
+                          </div>
+                        </div>
+                        <div className="min-w-0">
+                          <a
+                            href={PHONE_HREF}
+                            onClick={() => trackPhoneClick()}
+                            className="block font-black tracking-tight text-[#101921]"
+                          >
+                            {PHONE_NUMBER}
+                          </a>
+                          <p className="text-sm font-medium text-[#101921]/80">
+                            Scheduling &amp; service questions
+                          </p>
                         </div>
                       </div>
-                      <div className="min-w-0">
-                        <a
-                          href={PHONE_HREF}
-                          onClick={() => trackPhoneClick()}
-                          className="block font-black tracking-tight text-[#101921]"
-                        >
-                          {PHONE_NUMBER}
-                        </a>
-                        <p className="text-sm font-medium text-[#101921]/80">Scheduling &amp; service questions</p>
-                      </div>
-                    </div>
+                    ) : null}
 
                     <div className="rounded-xl bg-white border border-gray-200 p-5 flex items-center gap-4">
                       <div className="h-12 w-12 rounded-lg bg-[#eef0ff] flex items-center justify-center text-[#3b3be0]">
@@ -182,7 +190,7 @@ export default function ContactPage() {
               <ShieldCheck className="h-6 w-6 text-[#101921]" />
             </div>
             <p className="text-sm font-medium text-gray-500 text-center leading-relaxed max-w-2xl">
-              We use qualified technicians and standard background and insurance checks where required. Information you submit is sent over HTTPS and handled as described in our{' '}
+              We coordinate with independent technicians. Licensing and insurance requirements can vary by job and location—verify credentials with the assigned technician when applicable. Information you submit is sent over HTTPS and handled as described in our{' '}
               <a href="/privacy-policy" className="text-[#F15A24] hover:underline font-bold">
                 Privacy Policy
               </a>

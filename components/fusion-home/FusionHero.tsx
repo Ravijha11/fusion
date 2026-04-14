@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { COMPANY_NAME } from '@/lib/site-config'
 
 /** All hero images under public/hero-section — shown one at a time, sliding horizontally */
 const HERO_IMAGES = [
@@ -117,7 +118,7 @@ export function FusionHero() {
         <div className="hero-content relative z-10 w-full max-w-4xl px-2 text-center text-white">
           <div className="hero-heading-wrap">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-              DigitalBull · New York
+              {COMPANY_NAME} · New York
             </p>
             <h1
               id="hero-heading"

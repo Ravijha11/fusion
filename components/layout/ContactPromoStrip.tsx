@@ -2,15 +2,13 @@
 
 import Link from 'next/link'
 import { PhoneCall } from 'lucide-react'
-
-const PHONE_DISPLAY = '555-123-4567'
-const PHONE_TEL = 'tel:+15551234567'
+import { COMPANY_NAME, PHONE_DISPLAY, PHONE_TEL } from '@/lib/site-config'
 
 export function ContactPromoStrip() {
   return (
     <section
       id="contact"
-      aria-label="Contact DigitalBull"
+      aria-label={`Contact ${COMPANY_NAME}`}
       className="relative overflow-hidden border-y border-amber-400/25 bg-gradient-to-br from-[#15153b] via-[#252547] to-[#1a1a3e]"
     >
       <div
@@ -36,13 +34,15 @@ export function ContactPromoStrip() {
         </div>
 
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:items-center md:flex-col md:items-stretch lg:flex-row lg:items-center">
-          <a
-            href={PHONE_TEL}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-slate-900 shadow-lg shadow-amber-900/20 transition hover:bg-amber-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a3e]"
-          >
-            <PhoneCall className="h-4 w-4 shrink-0" aria-hidden />
-            {PHONE_DISPLAY}
-          </a>
+          {PHONE_DISPLAY && PHONE_TEL ? (
+            <a
+              href={PHONE_TEL}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-slate-900 shadow-lg shadow-amber-900/20 transition hover:bg-amber-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a3e]"
+            >
+              <PhoneCall className="h-4 w-4 shrink-0" aria-hidden />
+              {PHONE_DISPLAY}
+            </a>
+          ) : null}
           <Link
             href="/contact"
             className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white/90 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"

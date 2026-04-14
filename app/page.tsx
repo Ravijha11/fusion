@@ -4,11 +4,12 @@ import { FusionFeaturedServices } from '@/components/fusion-home/FusionFeaturedS
 import { FusionRowsQuote } from '@/components/fusion-home/FusionRowsQuote'
 import { FusionValueCards } from '@/components/fusion-home/FusionValueCards'
 import { FusionFAQ } from '@/components/fusion-home/FusionFAQ'
+import { COMPANY_NAME } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: 'Appliance Repair in New York',
   description:
-    'DigitalBull — appliance repair booking in New York with qualified technicians and clear starting prices. Book online or call.',
+    `${COMPANY_NAME} — appliance repair booking in New York with qualified technicians and clear starting prices. Book online or contact us.`,
   alternates: {
     canonical: '/',
   },

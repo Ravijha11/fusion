@@ -8,6 +8,7 @@ import { ChatBot } from '@/components/chat-bot'
 import { services, getServiceBySlug } from '@/lib/services'
 import { getServiceCardImage } from '@/lib/service-card-images'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
+import { COMPANY_NAME, PHONE_DISPLAY, PHONE_E164, PHONE_TEL } from '@/lib/site-config'
 import { 
   Phone, 
   CheckCircle, 
@@ -17,8 +18,8 @@ import {
   AlertCircle,
 } from 'lucide-react'
 
-const PHONE_NUMBER = '555-123-4567'
-const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
+const PHONE_NUMBER = PHONE_DISPLAY
+const PHONE_HREF = PHONE_TEL
 
 // Generate static paths for all services
 export async function generateStaticParams() {
@@ -76,8 +77,8 @@ export default async function ServicePage({
     description: service.longDescription,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'DigitalBull',
-      telephone: '+1-555-123-4567',
+      name: COMPANY_NAME,
+      ...(PHONE_E164 ? { telephone: PHONE_E164 } : {}),
     },
     areaServed: {
       '@type': 'City',

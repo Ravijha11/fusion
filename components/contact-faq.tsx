@@ -10,8 +10,9 @@ import {
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { trackPhoneClick } from '@/lib/tracking'
+import { PHONE_TEL } from '@/lib/site-config'
 
-const PHONE_HREF = 'tel:+15551234567'
+const PHONE_HREF = PHONE_TEL
 
 const faqs = [
   {
@@ -43,7 +44,7 @@ const faqs = [
   },
   {
     question: "What areas do you service?",
-    answer: "We serve the greater metro area and nearby communities. Contact us with your address so we can confirm coverage and scheduling."
+    answer: "We serve the New York metro area and nearby communities. Contact us with your address so we can confirm coverage and scheduling."
   },
   {
     question: "How do I know if my appliance is worth repairing?",
@@ -74,19 +75,21 @@ export function ContactFaqSection() {
                 <p className="text-gray-300 mb-8">
                   If you have additional questions that are not covered in our FAQs page, please contact us.
                 </p>
-                <Button
-                  asChild
-                  className="bg-[#F15A24] hover:bg-[#D94A1A] text-white rounded-full px-8 py-6 text-lg font-semibold w-full sm:w-auto"
-                >
-                  <a
-                    href={PHONE_HREF}
-                    className="inline-flex items-center justify-center gap-2"
-                    onClick={() => trackPhoneClick()}
-                    aria-label="Call our business phone"
+                {PHONE_HREF ? (
+                  <Button
+                    asChild
+                    className="bg-[#F15A24] hover:bg-[#D94A1A] text-white rounded-full px-8 py-6 text-lg font-semibold w-full sm:w-auto"
                   >
-                    Call <ArrowRight className="w-5 h-5" aria-hidden />
-                  </a>
-                </Button>
+                    <a
+                      href={PHONE_HREF}
+                      className="inline-flex items-center justify-center gap-2"
+                      onClick={() => trackPhoneClick()}
+                      aria-label="Call our business phone"
+                    >
+                      Call <ArrowRight className="w-5 h-5" aria-hidden />
+                    </a>
+                  </Button>
+                ) : null}
               </div>
             </div>
           </div>

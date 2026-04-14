@@ -6,11 +6,12 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { COMPANY_NAME } from '@/lib/site-config'
 
 const faqs = [
   {
     q: 'How quickly can you come out?',
-    a: 'Appointment timing depends on technician availability and parts. Earlier or next-day windows may be available in parts of the New York metro (not guaranteed). When you call or book online, we share estimated arrival windows.',
+    a: 'Appointment timing depends on technician availability and parts. Earlier or next-day windows may be available in the New York metro area (not guaranteed). When you call or book online, we share estimated arrival windows.',
   },
   {
     q: 'How does pricing work?',
@@ -53,7 +54,7 @@ export function FusionFAQ() {
                 <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-4 border-[#ffc700] bg-white shadow-[0_10px_25px_rgba(0,0,0,0.25)] sm:h-20 sm:w-20">
                   <Image
                     src="/Logo/digital-bull-logo-removebg-preview.png"
-                    alt="DigitalBull logo"
+                    alt={`${COMPANY_NAME} logo`}
                     fill
                     sizes="80px"
                     className="rounded-full object-contain p-2.5"
@@ -61,7 +62,7 @@ export function FusionFAQ() {
                 </div>
                 <div className="min-w-0">
                   <div className="truncate text-xl font-semibold leading-tight sm:text-2xl">
-                    DigitalBull
+                    {COMPANY_NAME}
                   </div>
                   <div className="text-sm text-white/80 sm:text-base">Appliance repair team</div>
                 </div>

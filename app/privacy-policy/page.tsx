@@ -1,18 +1,25 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import {
+  COMPANY_NAME,
+  EMAIL_PRIVACY,
+  PHONE_DISPLAY,
+  SITE_HOST_DISPLAY,
+  SITE_ORIGIN,
+} from '@/lib/site-config'
 
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'DigitalBull privacy policy: how we collect, use, and protect personal information for appliance repair booking, cookies, and Microsoft Advertising (UET).',
+    `${COMPANY_NAME} privacy policy: how we collect, use, and protect personal information for appliance repair booking, cookies, and Microsoft Advertising (UET).`,
   alternates: {
     canonical: '/privacy-policy',
   },
 }
 
 export default function PrivacyPolicyPage() {
-  const lastUpdated = 'April 1, 2026'
+  const lastUpdated = 'April 14, 2026'
 
   return (
     <>
@@ -33,8 +40,8 @@ export default function PrivacyPolicyPage() {
                 Introduction
               </h2>
               <p className="text-foreground leading-relaxed">
-                <strong>DigitalBull</strong> (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates this website and
-                booking service at <strong>www.digitalbull.co.in</strong> and is committed to protecting your privacy.
+                <strong>{COMPANY_NAME}</strong> (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates this website and
+                booking service at <strong>{SITE_HOST_DISPLAY}</strong> and is committed to protecting your privacy.
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when
                 you visit our site and use our services. Pricing and fees discussed on this site are
                 generally quoted in <strong>U.S. dollars (USD)</strong>. Our primary service coordination
@@ -262,20 +269,20 @@ export default function PrivacyPolicyPage() {
                 please contact us at:
               </p>
               <address className="not-italic mt-4 text-foreground">
-                <p><strong>DigitalBull</strong></p>
+                <p><strong>{COMPANY_NAME}</strong></p>
                 <p>
                   Website:{' '}
                   <a
-                    href="https://www.digitalbull.co.in"
+                    href={SITE_ORIGIN}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary underline-offset-2 hover:underline"
                   >
-                    www.digitalbull.co.in
+                    {SITE_HOST_DISPLAY}
                   </a>
                 </p>
-                <p>Email: privacy@digitalbull.co.in</p>
-                <p>Phone: 555-123-4567</p>
+                <p>Email: {EMAIL_PRIVACY}</p>
+                {PHONE_DISPLAY ? <p>Phone: {PHONE_DISPLAY}</p> : null}
               </address>
             </section>
 
