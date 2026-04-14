@@ -53,7 +53,7 @@ export function Footer() {
             <Link href="/" className="mb-6 block">
               <div className="relative h-16 w-56">
                 <Image
-                  src="/Logo/digital-bull-logo-removebg-preview.png"
+                  src="/Logo/image.png"
                   alt={`${COMPANY_NAME} logo`}
                   fill
                   className="object-contain drop-shadow-sm"

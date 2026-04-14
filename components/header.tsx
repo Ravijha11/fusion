@@ -70,7 +70,7 @@ export function Header() {
           <Link href="/" className="group flex items-center">
             <div className="relative h-12 w-48 transition-transform">
               <Image
-                src="/Logo/digital-bull-logo-removebg-preview.png"
+                src="/Logo/image.png"
                 alt={`${COMPANY_NAME} logo`}
                 fill
                 className="object-contain"
@@ -140,7 +140,7 @@ export function Header() {
                 <Link href="/" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
                   <div className="relative h-10 w-40">
                     <Image
-                      src="/Logo/digital-bull-logo-removebg-preview.png"
+                      src="/Logo/image.png"
                       alt={`${COMPANY_NAME} logo`}
                       fill
                       className="object-contain"

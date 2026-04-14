@@ -29,7 +29,7 @@ const strip2 = [
   'Book online',
 ]
 
-const AVATAR_SRC = '/Logo/digital-bull-logo-removebg-preview.png'
+const AVATAR_SRC = '/Logo/image.png'
 
 export function FusionRowsQuote() {
   return (

@@ -53,7 +53,7 @@ export function FusionFAQ() {
               <div className="flex items-center gap-4">
                 <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-4 border-[#ffc700] bg-white shadow-[0_10px_25px_rgba(0,0,0,0.25)] sm:h-20 sm:w-20">
                   <Image
-                    src="/Logo/digital-bull-logo-removebg-preview.png"
+                    src="/Logo/image.png"
                     alt={`${COMPANY_NAME} logo`}
                     fill
                     sizes="80px"
