@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { services } from '@/lib/services'
 import { getServiceCardImage } from '@/lib/service-card-images'
+import { COMPANY_NAME } from '@/lib/site-config'
 
 const SECTION_BG = '#0A0E14'
 
@@ -70,7 +71,7 @@ export function FusionFeaturedServices() {
                     <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-slate-100 shadow-sm ring-1 ring-slate-200/80 transition group-hover:ring-[#4b32c3]/30 group-hover:shadow-md">
                       <Image
                         src={src}
-                        alt={`${svc.name} — DigitalBull`}
+                        alt={`${svc.name} — ${COMPANY_NAME}`}
                         fill
                         className={contain ? 'object-contain object-center p-2' : 'object-cover object-center'}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

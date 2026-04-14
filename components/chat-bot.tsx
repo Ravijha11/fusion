@@ -5,14 +5,15 @@ import { MessageSquare, Send, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { services } from '@/lib/services'
+import { COMPANY_NAME, PHONE_DISPLAY } from '@/lib/site-config'
 
 interface Message {
   text: string
   sender: 'user' | 'bot'
 }
 
-const COMPANY_DISPLAY = 'DigitalBull'
-const PHONE_NUMBER = '555-123-4567'
+const COMPANY_DISPLAY = COMPANY_NAME
+const PHONE_NUMBER = PHONE_DISPLAY
 
 type ChatBotProps = {
   /** Optional: preselect service when on a service subpage */
@@ -45,7 +46,10 @@ export function ChatBot({ serviceSlug }: ChatBotProps) {
         text: `${service?.name ?? 'This service'} price: Starting at ${service?.startingPrice ?? ''} (same as shown on our website).`,
         sender: 'bot',
       },
-      { text: `Phone: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`, sender: 'bot' },
+      {
+        text: `${PHONE_NUMBER ? `Phone: ${PHONE_NUMBER}\n` : ''}Company: ${COMPANY_DISPLAY}`,
+        sender: 'bot',
+      },
     ])
   }
 
@@ -65,8 +69,8 @@ export function ChatBot({ serviceSlug }: ChatBotProps) {
         services.find((s) => lowerMessage.includes(s.name.toLowerCase()))
 
       const botResponse = serviceMatch
-        ? `${serviceMatch.name} price: Starting at ${serviceMatch.startingPrice} (same as shown on our website).\nPhone: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`
-        : `Please choose a service using the buttons below.\nPhone: ${PHONE_NUMBER}\nCompany: ${COMPANY_DISPLAY}`
+        ? `${serviceMatch.name} price: Starting at ${serviceMatch.startingPrice} (same as shown on our website).\n${PHONE_NUMBER ? `Phone: ${PHONE_NUMBER}\n` : ''}Company: ${COMPANY_DISPLAY}`
+        : `Please choose a service using the buttons below.\n${PHONE_NUMBER ? `Phone: ${PHONE_NUMBER}\n` : ''}Company: ${COMPANY_DISPLAY}`
 
       setMessages(prev => [...prev, { text: botResponse, sender: 'bot' }])
     }, 600)
@@ -91,7 +95,9 @@ export function ChatBot({ serviceSlug }: ChatBotProps) {
             className="fixed bottom-24 right-6 z-[1000] w-[350px] overflow-hidden rounded-[2rem] glass-dark border-primary/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] font-sans flex flex-col"
           >
             <div className="flex items-center justify-between bg-black/60 p-5 border-b border-white/10">
-              <span className="text-sm font-black uppercase tracking-widest text-primary text-glow">Digital<span className="text-white">Bull</span></span>
+              <span className="text-sm font-black uppercase tracking-widest text-primary text-glow">
+                {COMPANY_DISPLAY}
+              </span>
               <button onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors text-white/50">
                 <X className="h-5 w-5" />
               </button>

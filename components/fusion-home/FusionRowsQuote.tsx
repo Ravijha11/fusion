@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { COMPANY_NAME, PHONE_DISPLAY } from '@/lib/site-config'
 
 const strip1 = [
   'Scheduling options',
@@ -29,8 +30,6 @@ const strip2 = [
 ]
 
 const AVATAR_SRC = '/Logo/digital-bull-logo-removebg-preview.png'
-
-const PHONE_DISPLAY = '555-123-4567'
 
 export function FusionRowsQuote() {
   return (
@@ -121,16 +120,19 @@ export function FusionRowsQuote() {
                         width={128}
                         height={128}
                         loading="lazy"
-                        alt="DigitalBull logo"
+                        alt={`${COMPANY_NAME} logo`}
                         style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                       />
                     </div>
                     <div className="ver-wrap gap-025">
                       <div className="txt-32">
-                        <strong>DigitalBull</strong>{' '}
-                        <span className="txt-24" style={{ color: '#64748b' }}>
-                          {PHONE_DISPLAY}
-                        </span>
+                        <strong>{COMPANY_NAME}</strong>
+                        {PHONE_DISPLAY ? (
+                          <span className="txt-24" style={{ color: '#64748b' }}>
+                            {' '}
+                            {PHONE_DISPLAY}
+                          </span>
+                        ) : null}
                       </div>
                       <div className="txt-24">Appliance repair · New York</div>
                     </div>

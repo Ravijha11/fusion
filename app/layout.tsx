@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
+import { COMPANY_NAME, EMAIL_SUPPORT, PHONE_E164, SITE_ORIGIN } from '@/lib/site-config'
 import './globals.css'
 import { CookieConsentProvider } from '@/components/cookie-consent-provider'
 import { CookieConsentBanner } from '@/components/cookie-consent-banner'
@@ -10,45 +11,45 @@ import { ChatBot } from '@/components/chat-bot'
 
 export const metadata: Metadata = {
   title: {
-    default: 'DigitalBull — Advanced Appliance Restoration',
-    template: '%s | DigitalBull',
+    default: `${COMPANY_NAME} — Appliance Repair Booking`,
+    template: `%s | ${COMPANY_NAME}`,
   },
   description:
-    'Licensed appliance repair in the New York area: refrigerators, laundry, cooking appliances, and more. Clear starting prices and written estimates before repair work.',
+    'Appliance repair booking in the New York area: refrigerators, laundry, cooking appliances, and more. Clear starting prices and written estimates before repair work.',
   keywords: [
     'appliance repair',
     'New York',
     'refrigerator repair',
     'washing machine repair',
-    'DigitalBull',
+    COMPANY_NAME,
   ],
-  authors: [{ name: 'DigitalBull' }],
-  creator: 'DigitalBull',
-  publisher: 'DigitalBull',
-  metadataBase: new URL('https://www.digitalbull.co.in'),
+  authors: [{ name: COMPANY_NAME }],
+  creator: COMPANY_NAME,
+  publisher: COMPANY_NAME,
+  metadataBase: new URL(SITE_ORIGIN),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.digitalbull.co.in',
-    siteName: 'DigitalBull',
-    title: 'DigitalBull — Advanced Appliance Restoration',
+    url: SITE_ORIGIN,
+    siteName: COMPANY_NAME,
+    title: `${COMPANY_NAME} — Appliance Repair Booking`,
     description:
-      'Licensed appliance repair in the New York area with clear starting prices and written estimates before repair work.',
+      'Appliance repair booking in the New York area with clear starting prices and written estimates before repair work.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'DigitalBull — Professional appliance restoration',
+        alt: `${COMPANY_NAME} — Appliance repair booking`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DigitalBull — Advanced Appliance Restoration',
+    title: `${COMPANY_NAME} — Appliance Repair Booking`,
     description:
       'Appliance repair booking in New York with qualified technicians and clear starting prices.',
     images: ['/og-image.jpg'],
@@ -89,13 +90,13 @@ export const viewport: Viewport = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://www.digitalbull.co.in/#organization',
-  name: 'DigitalBull',
+  '@id': `${SITE_ORIGIN}/#organization`,
+  name: COMPANY_NAME,
   description:
     'Appliance repair booking in New York with qualified technicians and clear starting prices.',
-  url: 'https://www.digitalbull.co.in',
-  telephone: '+1-555-123-4567',
-  email: 'support@digitalbull.co.in',
+  url: SITE_ORIGIN,
+  ...(PHONE_E164 ? { telephone: PHONE_E164 } : {}),
+  email: EMAIL_SUPPORT,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'New York',

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site-config'
 import { 
   Phone, 
   ArrowRight,
@@ -14,8 +15,8 @@ import {
   CreditCard,
 } from 'lucide-react'
 
-const PHONE_NUMBER = '555-123-4567'
-const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
+const PHONE_NUMBER = PHONE_DISPLAY
+const PHONE_HREF = PHONE_TEL
 
 export const metadata: Metadata = {
   title: 'How It Works',
@@ -35,7 +36,7 @@ const steps = [
       'Send a booking request in a few minutes. Choose a preferred date. Earlier appointment windows may be available depending on scheduling (not guaranteed).',
     details: [
       'Fill out our simple online form',
-      'Or call us at 555-123-4567',
+      ...(PHONE_NUMBER ? [`Or call us at ${PHONE_NUMBER}`] : []),
       'Describe your appliance issue',
       'Choose your preferred appointment time',
     ],
@@ -311,17 +312,19 @@ export default function HowItWorksPage() {
                 </Link>
               </Button>
               
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="h-14 px-8 text-lg font-semibold rounded-none"
-              >
-                <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
-                  <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
-                  Call {PHONE_NUMBER}
-                </a>
-              </Button>
+              {PHONE_NUMBER && PHONE_HREF ? (
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="h-14 px-8 text-lg font-semibold rounded-none"
+                >
+                  <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
+                    <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
+                    Call {PHONE_NUMBER}
+                  </a>
+                </Button>
+              ) : null}
             </div>
           </div>
         </section>

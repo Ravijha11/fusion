@@ -6,9 +6,10 @@ import { services } from '@/lib/services'
 import { Phone, ArrowRight } from 'lucide-react'
 import { getServiceCardImage } from '@/lib/service-card-images'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site-config'
 
-const PHONE_NUMBER = '555-123-4567'
-const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
+const PHONE_NUMBER = PHONE_DISPLAY
+const PHONE_HREF = PHONE_TEL
 
 export const metadata: Metadata = {
   title: 'Appliance Repair Services',
@@ -51,16 +52,18 @@ export default function ServicesPage() {
                   Book Service <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Link>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="h-12 px-7 text-base font-semibold rounded-none border-white/30 bg-transparent text-white hover:bg-white/10"
-              >
-                <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
-                  <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
-                  {PHONE_NUMBER}
-                </a>
-              </Button>
+              {PHONE_NUMBER && PHONE_HREF ? (
+                <Button
+                  asChild
+                  variant="outline"
+                  className="h-12 px-7 text-base font-semibold rounded-none border-white/30 bg-transparent text-white hover:bg-white/10"
+                >
+                  <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
+                    <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
+                    {PHONE_NUMBER}
+                  </a>
+                </Button>
+              ) : null}
             </div>
 
             <p className="mt-8 text-sm text-white/70 max-w-3xl mx-auto">
@@ -179,7 +182,7 @@ export default function ServicesPage() {
               Don&apos;t See Your Appliance?
             </h2>
             <p className="mt-4 text-xl text-gray-600">
-              We repair many other appliances not listed here. Call us to discuss your repair needs.
+              We repair many other appliances not listed here. Contact us to discuss your repair needs.
             </p>
             <div className="mt-8">
               <Button
@@ -188,10 +191,7 @@ export default function ServicesPage() {
                 className="h-14 px-8 text-lg font-semibold rounded-none"
                 style={{ backgroundColor: BOOK_SERVICE_BG, color: BOOK_SERVICE_FG }}
               >
-                <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
-                  <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
-                  {PHONE_NUMBER}
-                </a>
+                <Link href="/contact">Contact us</Link>
               </Button>
             </div>
           </div>

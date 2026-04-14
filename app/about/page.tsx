@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site-config'
 import { 
   Phone, 
   CheckCircle, 
@@ -13,8 +14,8 @@ import {
   Heart,
 } from 'lucide-react'
 
-const PHONE_NUMBER = '555-123-4567'
-const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
+const PHONE_NUMBER = PHONE_DISPLAY
+const PHONE_HREF = PHONE_TEL
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -146,7 +147,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
                   <div className="text-center p-8">
                     <Users className="mx-auto h-16 w-16 text-primary" aria-hidden="true" />
-                    <p className="mt-4 text-lg font-medium text-foreground">Serving the New York metro area</p>
+                    <p className="mt-4 text-lg font-medium text-foreground">Serving the New York metro area &amp; nearby communities</p>
                   </div>
                 </div>
               </div>
@@ -291,7 +292,7 @@ export default function AboutPage() {
               Ready to Get Your Appliance Fixed?
             </h2>
             <p className="mt-4 text-xl text-muted-foreground">
-              Book a repair request online or call us to discuss your needs.
+              Book a repair request online or contact us to discuss your needs.
             </p>
             
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -302,17 +303,19 @@ export default function AboutPage() {
                 </Link>
               </Button>
               
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="h-14 px-8 text-lg font-semibold"
-              >
-                <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
-                  <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
-                  Call {PHONE_NUMBER}
-                </a>
-              </Button>
+              {PHONE_NUMBER && PHONE_HREF ? (
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="h-14 px-8 text-lg font-semibold"
+                >
+                  <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
+                    <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
+                    Call {PHONE_NUMBER}
+                  </a>
+                </Button>
+              ) : null}
             </div>
           </div>
         </section>

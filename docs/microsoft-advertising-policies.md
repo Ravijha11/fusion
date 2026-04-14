@@ -1,6 +1,6 @@
 # Microsoft Advertising Network Policies
 
-This document serves as a reference for aligning the DigitalBull appliance repair website with Microsoft Advertising Network policies to ensure the site is highly optimized and ad-friendly.
+This document serves as a reference for aligning the Your Home Appliance Care website (live at **https://yourhomeappliancecare.com**) with Microsoft Advertising Network policies to ensure the site is highly optimized and ad-friendly.
 
 Below is the compilation of the core advertising guidelines provided:
 
@@ -51,9 +51,9 @@ As an advertiser, it is your responsibility to comply with laws and regulations 
 
 ---
 
-## Website Implementation Checklist for DigitalBull
+## Website Implementation Checklist for Your Home Appliance Care
 - [x] Add **Refund Policy** link to the footer for easy accessibility.
-- [x] Ensure **Privacy Policy** page exists, states DigitalBull as the company, declares the purpose of data collected (e.g., to process booking requests), and includes standard opt-out clauses.
+- [x] Ensure **Privacy Policy** page exists, states Your Home Appliance Care as the company, declares the purpose of data collected (e.g., to process booking requests), and includes standard opt-out clauses.
 - [x] Ensure **Terms of Service** page exists.
 - [x] Ensure the Contact / Booking form uses standard HTML paths and does not obstruct navigation.
 - [x] Confirm pricing ("From $89", etc.) is identical and clearly accessible on service landing pages.

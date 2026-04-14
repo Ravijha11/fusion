@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { COMPANY_NAME, EMAIL_SUPPORT, PHONE_DISPLAY } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: 'Refund and Return Policy',
-  description: 'Refund and Return Policy for DigitalBull appliance repair services.',
+  description: `Refund and Return Policy for ${COMPANY_NAME} appliance repair services.`,
   alternates: {
     canonical: '/refund',
   },
 }
 
 export default function RefundPolicyPage() {
-  const lastUpdated = 'April 1, 2026'
+  const lastUpdated = 'April 14, 2026'
 
   return (
     <>
@@ -30,7 +31,7 @@ export default function RefundPolicyPage() {
                 Service & Refund Policy Overview
               </h2>
               <p className="leading-relaxed mb-4">
-                <strong>DigitalBull</strong> connects customers with independent local appliance repair
+                <strong>{COMPANY_NAME}</strong> connects customers with independent local appliance repair
                 technicians and helps coordinate scheduling. This page explains when service-call fees
                 may be refundable and how warranty concerns are handled. Warranty terms (if any) are
                 provided by the individual technician who performs the repair and can vary by repair
@@ -94,9 +95,9 @@ export default function RefundPolicyPage() {
                 explanation of the issue.
               </p>
               <address className="not-italic mt-4 text-gray-500">
-                <p><strong>DigitalBull</strong></p>
-                <p>Email: support@digitalbull.co.in</p>
-                <p>Phone: 555-123-4567</p>
+                <p><strong>{COMPANY_NAME}</strong></p>
+                <p>Email: {EMAIL_SUPPORT}</p>
+                {PHONE_DISPLAY ? <p>Phone: {PHONE_DISPLAY}</p> : null}
               </address>
             </section>
           </div>

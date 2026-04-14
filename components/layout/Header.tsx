@@ -18,9 +18,9 @@ import { cn } from "@/lib/utils";
 import { servicesData } from "@/data/Services";
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from "@/lib/book-service-theme";
 import { trackPhoneClick } from "@/lib/tracking";
+import { COMPANY_NAME, PHONE_DISPLAY, PHONE_TEL, SITE_HOST_DISPLAY, SITE_ORIGIN } from "@/lib/site-config";
 
-const PHONE_DISPLAY = "555-123-4567";
-const PHONE_HREF = "tel:+15551234567";
+const PHONE_HREF = PHONE_TEL;
 /** Nav / mega-menu accent (orange) */
 const CTA_ORANGE = "#FF5722";
 
@@ -103,26 +103,30 @@ export function Header() {
     <>
       <div className="fixed inset-x-0 top-0 z-[60] flex flex-col">
         <div className="flex h-10 w-full items-center justify-center gap-2 bg-[#0f172a] px-4 text-sm font-semibold text-white sm:text-base">
+          {PHONE_DISPLAY && PHONE_HREF ? (
+            <>
+              <a
+                href={PHONE_HREF}
+                onClick={() => trackPhoneClick()}
+                className="inline-flex items-center gap-2"
+                aria-label={`Call us at ${PHONE_DISPLAY}`}
+              >
+                <Phone className="h-4 w-4 shrink-0 text-amber-400" aria-hidden />
+                <span className="tabular-nums tracking-wide">{PHONE_DISPLAY}</span>
+              </a>
+              <span className="mx-2 text-white/40" aria-hidden>
+                |
+              </span>
+            </>
+          ) : null}
           <a
-            href={PHONE_HREF}
-            onClick={() => trackPhoneClick()}
-            className="inline-flex items-center gap-2"
-            aria-label={`Call us at ${PHONE_DISPLAY}`}
-          >
-            <Phone className="h-4 w-4 shrink-0 text-amber-400" aria-hidden />
-            <span className="tabular-nums tracking-wide">{PHONE_DISPLAY}</span>
-          </a>
-          <span className="mx-2 text-white/40" aria-hidden>
-            |
-          </span>
-          <a
-            href="https://www.digitalbull.co.in"
+            href={SITE_ORIGIN}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-amber-200 underline-offset-4 hover:underline"
-            aria-label="Visit www.digitalbull.co.in"
+            aria-label={`Visit ${SITE_HOST_DISPLAY}`}
           >
-            www.digitalbull.co.in
+            {SITE_HOST_DISPLAY}
           </a>
         </div>
 
@@ -136,14 +140,14 @@ export function Header() {
               <div className="relative h-12 w-12 sm:h-14 sm:w-14">
                 <Image
                   src="/Logo/digital-bull-logo-removebg-preview.png"
-                  alt="DigitalBull logo"
+                  alt={`${COMPANY_NAME} logo`}
                   fill
                   sizes="56px"
                   className="rounded-lg object-contain"
                 />
               </div>
               <span className="hidden text-lg font-extrabold uppercase tracking-tight text-slate-900 sm:block sm:text-xl">
-                Digital<span style={{ color: CTA_ORANGE }}>Bull</span>
+                {COMPANY_NAME}
               </span>
             </Link>
 

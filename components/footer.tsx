@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
-const PHONE_NUMBER = '555-123-4567'
-const PHONE_HREF = `tel:+1${PHONE_NUMBER.replace(/-/g, '')}`
+import { COMPANY_NAME, EMAIL_SUPPORT, PHONE_DISPLAY, PHONE_TEL, SITE_HOST_DISPLAY, SITE_ORIGIN } from '@/lib/site-config'
+const PHONE_NUMBER = PHONE_DISPLAY
+const PHONE_HREF = PHONE_TEL
 
 const services = [
   { name: 'Refrigerator Repair', href: '/services/refrigerator' },
@@ -53,7 +54,7 @@ export function Footer() {
               <div className="relative h-16 w-56">
                 <Image
                   src="/Logo/digital-bull-logo-removebg-preview.png"
-                  alt="DigitalBull logo"
+                  alt={`${COMPANY_NAME} logo`}
                   fill
                   className="object-contain drop-shadow-sm"
                 />
@@ -61,7 +62,7 @@ export function Footer() {
             </Link>
 
             <p className="mt-6 text-[15px] leading-relaxed text-white/85">
-              Licensed appliance repair in the New York metropolitan area. Clear starting prices on
+              Appliance repair booking in the New York metropolitan area. Clear starting prices on
               service pages. Read our{' '}
               <Link href="/privacy-policy" className="font-semibold text-amber-200 underline-offset-2 hover:underline">
                 Privacy Policy
@@ -78,27 +79,29 @@ export function Footer() {
             </p>
 
             <div className="mt-8 space-y-4">
+              {PHONE_NUMBER && PHONE_HREF ? (
+                <a
+                  href={PHONE_HREF}
+                  className="flex items-center gap-3 text-[15px] font-medium text-white/90 transition-colors hover:text-amber-200"
+                  aria-label={`Call us at ${PHONE_NUMBER}`}
+                >
+                  <div className="rounded-full bg-white/10 p-2">
+                    <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
+                  </div>
+                  <span>{PHONE_NUMBER}</span>
+                </a>
+              ) : null}
               <a
-                href={PHONE_HREF}
-                className="flex items-center gap-3 text-[15px] font-medium text-white/90 transition-colors hover:text-amber-200"
-                aria-label={`Call us at ${PHONE_NUMBER}`}
-              >
-                <div className="rounded-full bg-white/10 p-2">
-                  <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
-                </div>
-                <span>{PHONE_NUMBER}</span>
-              </a>
-              <a
-                href="mailto:support@digitalbull.co.in"
+                href={`mailto:${EMAIL_SUPPORT}`}
                 className="flex items-center gap-3 text-[15px] font-medium text-white/90 transition-colors hover:text-amber-200"
               >
                 <div className="rounded-full bg-white/10 p-2">
                   <Mail className="h-4 w-4 text-primary" aria-hidden="true" />
                 </div>
-                <span>support@digitalbull.co.in</span>
+                <span>{EMAIL_SUPPORT}</span>
               </a>
               <a
-                href="https://www.digitalbull.co.in"
+                href={SITE_ORIGIN}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-[15px] font-medium text-white/90 transition-colors hover:text-amber-200"
@@ -106,7 +109,7 @@ export function Footer() {
                 <div className="rounded-full bg-white/10 p-2">
                   <ArrowRight className="h-4 w-4 text-primary" aria-hidden="true" />
                 </div>
-                <span>www.digitalbull.co.in</span>
+                <span>{SITE_HOST_DISPLAY}</span>
               </a>
               <div className="flex items-start gap-3 text-[15px] font-medium text-white/90">
                 <div className="rounded-full bg-white/10 p-2">
@@ -175,7 +178,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-8 md:flex-row">
           <div className="text-center text-sm text-white/75 md:text-left">
-            <p>&copy; {currentYear} DigitalBull. All rights reserved.</p>
+            <p>&copy; {currentYear} {COMPANY_NAME}. All rights reserved.</p>
             <p className="mt-2 max-w-xl text-white/65">
               Prices on this site are shown in <strong className="font-semibold text-white/80">U.S. dollars (USD)</strong>.
               Service area: United States — New York metropolitan region and nearby communities unless
