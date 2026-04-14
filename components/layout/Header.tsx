@@ -139,7 +139,7 @@ export function Header() {
             >
               <div className="relative h-12 w-12 sm:h-14 sm:w-14">
                 <Image
-                  src="/Logo/digital-bull-logo-removebg-preview.png"
+                  src="/Logo/image.png"
                   alt={`${COMPANY_NAME} logo`}
                   fill
                   sizes="56px"
