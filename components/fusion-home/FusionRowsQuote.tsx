@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { COMPANY_NAME, PHONE_DISPLAY } from '@/lib/site-config'
+import { COMPANY_NAME, PHONE_DISPLAY, SERVICE_AREA_CITY } from '@/lib/site-config'
 
 const strip1 = [
   'Scheduling options',
@@ -12,7 +12,7 @@ const strip1 = [
   'Cooking appliances',
   'Dishwashers',
   'Clear quotes',
-  'New York metro',
+  `${SERVICE_AREA_CITY} area`,
   'In-home repair',
   'Warranty on parts',
 ]
@@ -134,7 +134,7 @@ export function FusionRowsQuote() {
                           </span>
                         ) : null}
                       </div>
-                      <div className="txt-24">Appliance repair · New York</div>
+                      <div className="txt-24">Appliance repair · {SERVICE_AREA_CITY}</div>
                     </div>
                   </div>
                 </div>

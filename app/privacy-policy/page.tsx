@@ -4,6 +4,7 @@ import {
   COMPANY_NAME,
   EMAIL_PRIVACY,
   PHONE_DISPLAY,
+  SERVICE_AREA_DISPLAY,
   SITE_HOST_DISPLAY,
   SITE_ORIGIN,
 } from '@/lib/site-config'
@@ -45,8 +46,8 @@ export default function PrivacyPolicyPage() {
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when
                 you visit our site and use our services. Pricing and fees discussed on this site are
                 generally quoted in <strong>U.S. dollars (USD)</strong>. Our primary service coordination
-                described on this site targets the <strong>United States</strong> (New York metropolitan
-                area and nearby communities) unless we confirm otherwise when you contact us.
+                described on this site targets <strong>{SERVICE_AREA_DISPLAY}</strong> unless we confirm
+                otherwise when you contact us.
               </p>
             </section>
 

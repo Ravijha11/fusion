@@ -33,7 +33,7 @@ export const services: ServiceData[] = [
     description: 'Expert refrigerator repair for all makes and models. Earlier slots may be available; not guaranteed.',
     longDescription:
       'We handle common refrigerator issues, from cooling problems to leaks and ice maker faults. We service major brands and confirm parts and scheduling before repairs begin.',
-    heroHeadline: 'Refrigerator Repair — New York',
+    heroHeadline: 'Refrigerator Repair — Lahar',
     startingPrice: '$89',
     commonFaults: [
       'Refrigerator not cooling properly',
@@ -50,9 +50,9 @@ export const services: ServiceData[] = [
       { title: 'Diagnosis & Estimate', description: 'The technician diagnoses the issue and provides a written estimate before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If you approve the estimate, the technician completes the repair when possible.' },
     ],
-    seoTitle: 'Refrigerator Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Refrigerator Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Expert refrigerator repair service in New York. Earlier slots may be available; not guaranteed. Qualified technicians (licensing where required). Starting at $89.',
+      'Expert refrigerator repair service in Lahar. Earlier slots may be available; not guaranteed. Qualified technicians (licensing where required). Starting at $89.',
     imagePrompts: {
       hero: 'Senior woman smiling in kitchen while a friendly uniformed technician kneels repairing a stainless refrigerator, clear tools, bright natural light, US apartment, warm tones.',
       stepPanels: [
@@ -69,7 +69,7 @@ export const services: ServiceData[] = [
     shortName: 'Washer',
     description: 'Professional washing machine repair. Front-load and top-load models.',
     longDescription: 'From simple drum issues to complex motor problems, our technicians fix all washing machine brands. We carry common replacement parts for faster repairs.',
-    heroHeadline: 'Washing Machine Repair — New York',
+    heroHeadline: 'Washing Machine Repair — Lahar',
     startingPrice: '$79',
     commonFaults: [
       'Machine not spinning',
@@ -86,9 +86,9 @@ export const services: ServiceData[] = [
       { title: 'Diagnosis & Estimate', description: 'After diagnosis, you receive a written estimate for parts and labor before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If you approve the estimate, the technician proceeds with the repair based on parts availability.' },
     ],
-    seoTitle: 'Washing Machine Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Washing Machine Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Professional washing machine repair in New York. All brands serviced. Earlier slots may be available; not guaranteed. Starting at $79.',
+      'Professional washing machine repair in Lahar. All brands serviced. Earlier slots may be available; not guaranteed. Starting at $79.',
     imagePrompts: {
       hero: 'Senior man watching technician fix front-load washer, technician shows part, laundry room tidy, friendly interaction, clear expressions.',
       stepPanels: [
@@ -105,7 +105,7 @@ export const services: ServiceData[] = [
     shortName: 'Dryer',
     description: 'Dryer repair for gas and electric models.',
     longDescription: 'We repair all dryer types including gas, electric, and ventless models. Safety is our priority with proper ventilation checks included.',
-    heroHeadline: 'Dryer Repair — New York',
+    heroHeadline: 'Dryer Repair — Lahar',
     startingPrice: '$79',
     commonFaults: [
       'Dryer not heating',
@@ -122,9 +122,9 @@ export const services: ServiceData[] = [
       { title: 'Expert Inspection', description: 'Technician inspects all components including lint trap and vent.' },
       { title: 'Safe & Working', description: 'Your dryer runs efficiently and safely again.' },
     ],
-    seoTitle: 'Dryer Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Dryer Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Expert dryer repair in New York. Gas and electric models. Earlier slots may be available; not guaranteed. Starting at $79.',
+      'Expert dryer repair in Lahar. Gas and electric models. Earlier slots may be available; not guaranteed. Starting at $79.',
     imagePrompts: {
       hero: 'Senior woman relieved as technician replaces dryer belt, dryer door open, lint trap visible, safe posture, bright laundry room.',
       stepPanels: [
@@ -141,7 +141,7 @@ export const services: ServiceData[] = [
     shortName: 'Oven',
     description: 'Oven, range, and cooktop repair. Gas and electric.',
     longDescription: 'From burner issues to oven temperature problems, we fix all cooking appliances. Gas appliance repairs include safety checks.',
-    heroHeadline: 'Oven & Range Repair — New York',
+    heroHeadline: 'Oven & Range Repair — Lahar',
     startingPrice: '$89',
     commonFaults: [
       'Oven not heating',
@@ -158,9 +158,9 @@ export const services: ServiceData[] = [
       { title: 'Diagnosis & Estimate', description: 'The technician runs checks and provides a written estimate before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If approved, repairs are completed when possible; some jobs require parts ordering.' },
     ],
-    seoTitle: 'Oven & Range Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Oven & Range Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Professional oven and range repair in New York. Gas and electric. Earlier slots may be available; not guaranteed. Starting at $89.',
+      'Professional oven and range repair in Lahar. Gas and electric. Earlier slots may be available; not guaranteed. Starting at $89.',
     imagePrompts: {
       hero: 'Senior couple watching technician test oven temperature with thermometer, kitchen stove in background, safety emphasis.',
       stepPanels: [
@@ -177,7 +177,7 @@ export const services: ServiceData[] = [
     shortName: 'Dishwasher',
     description: 'Dishwasher repair for all major brands. Earlier slots may be available; not guaranteed.',
     longDescription: 'We fix dishwashers that won\'t clean, won\'t drain, or have other issues. Many repairs can be completed in one visit when parts are available.',
-    heroHeadline: 'Dishwasher Repair — New York',
+    heroHeadline: 'Dishwasher Repair — Lahar',
     startingPrice: '$79',
     commonFaults: [
       'Dishes not getting clean',
@@ -194,9 +194,9 @@ export const services: ServiceData[] = [
       { title: 'Diagnosis & Estimate', description: 'After diagnosis, you receive a written estimate for parts and labor before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If you approve the estimate, the technician completes the repair when possible.' },
     ],
-    seoTitle: 'Dishwasher Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Dishwasher Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Expert dishwasher repair in New York. All brands serviced. Earlier slots may be available; not guaranteed. Starting at $79.',
+      'Expert dishwasher repair in Lahar. All brands serviced. Earlier slots may be available; not guaranteed. Starting at $79.',
     imagePrompts: {
       hero: 'Senior woman smiling as technician replaces dishwasher spray arm, clean dishes visible, kitchen sink area tidy.',
       stepPanels: [
@@ -213,7 +213,7 @@ export const services: ServiceData[] = [
     shortName: 'Microwave',
     description: 'Microwave oven repair. Countertop and built-in models.',
     longDescription: 'We repair all microwave issues safely. Our technicians are trained in microwave-specific safety procedures.',
-    heroHeadline: 'Microwave Repair — New York',
+    heroHeadline: 'Microwave Repair — Lahar',
     startingPrice: '$69',
     commonFaults: [
       'Not heating food',
@@ -230,9 +230,9 @@ export const services: ServiceData[] = [
       { title: 'Diagnosis & Estimate', description: 'The technician diagnoses the issue and shares a written estimate before repairs begin.' },
       { title: 'Repair (If Approved)', description: 'If approved, the technician completes the repair following standard safety practices.' },
     ],
-    seoTitle: 'Microwave Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Microwave Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Professional microwave repair in New York. Safe service. Earlier slots may be available; not guaranteed. Starting at $69.',
+      'Professional microwave repair in Lahar. Safe service. Earlier slots may be available; not guaranteed. Starting at $69.',
     imagePrompts: {
       hero: 'Senior man using microwave after repair, technician points to simple control panel, large readable buttons.',
       stepPanels: [
@@ -249,7 +249,7 @@ export const services: ServiceData[] = [
     shortName: 'AC',
     description: 'AC repair and maintenance. Window and central units.',
     longDescription: 'AC repair for window units, central air systems, and mini-splits.',
-    heroHeadline: 'Air Conditioner Repair — New York',
+    heroHeadline: 'Air Conditioner Repair — Lahar',
     startingPrice: '$99',
     commonFaults: [
       'Not cooling properly',
@@ -266,9 +266,9 @@ export const services: ServiceData[] = [
       { title: 'Full Inspection', description: 'Technician checks all components thoroughly.' },
       { title: 'Cool Comfort', description: 'Your home is comfortable again.' },
     ],
-    seoTitle: 'Air Conditioner Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Air Conditioner Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Expert AC repair in New York. Window and central units. Earlier slots may be available; not guaranteed. Starting at $99.',
+      'Expert AC repair in Lahar. Window and central units. Earlier slots may be available; not guaranteed. Starting at $99.',
     imagePrompts: {
       hero: 'Senior woman pointing at wall AC while technician on ladder outside services unit, safety harness, clear outdoor home setting.',
       stepPanels: [
@@ -285,7 +285,7 @@ export const services: ServiceData[] = [
     shortName: 'TV',
     description: 'TV repair for all brands. LED, OLED, and Smart TVs.',
     longDescription: 'From picture problems to sound issues, we repair all TV types. Smart TV software troubleshooting included.',
-    heroHeadline: 'Television Repair — New York',
+    heroHeadline: 'Television Repair — Lahar',
     startingPrice: '$79',
     commonFaults: [
       'No picture',
@@ -302,9 +302,9 @@ export const services: ServiceData[] = [
       { title: 'Expert Diagnosis', description: 'Technician diagnoses the issue during the visit.' },
       { title: 'Picture Perfect', description: 'Enjoy your favorite shows again.' },
     ],
-    seoTitle: 'Television Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Television Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Professional TV repair in New York. All brands and types. Earlier slots may be available; not guaranteed. Starting at $79.',
+      'Professional TV repair in Lahar. All brands and types. Earlier slots may be available; not guaranteed. Starting at $79.',
     imagePrompts: {
       hero: 'Senior couple watching technician adjust TV settings, remote in hand, clear before/after brightness.',
       stepPanels: [
@@ -321,7 +321,7 @@ export const services: ServiceData[] = [
     shortName: 'Computer',
     description: 'Computer and laptop repair. Hardware and software.',
     longDescription: 'We fix computers and laptops of all brands. From slow performance to hardware failures, we can help.',
-    heroHeadline: 'Computer Repair — New York',
+    heroHeadline: 'Computer Repair — Lahar',
     startingPrice: '$69',
     commonFaults: [
       'Slow performance',
@@ -338,9 +338,9 @@ export const services: ServiceData[] = [
       { title: 'On-Site Repair', description: 'Technician comes to your home.' },
       { title: 'Back Online', description: 'Your computer works smoothly again.' },
     ],
-    seoTitle: 'Computer Repair — New York | Your Home Appliance Care',
+    seoTitle: 'Computer Repair — Lahar | Your Home Appliance Care',
     seoDescription:
-      'Expert computer and laptop repair in New York. All brands. Earlier slots may be available; not guaranteed. Starting at $69.',
+      'Expert computer and laptop repair in Lahar. All brands. Earlier slots may be available; not guaranteed. Starting at $69.',
     imagePrompts: {
       hero: 'Senior man handing laptop to friendly technician at home desk, technician explains with simple gestures, calm environment.',
       stepPanels: [

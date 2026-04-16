@@ -10,7 +10,7 @@ import {
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { trackPhoneClick } from '@/lib/tracking'
-import { PHONE_TEL } from '@/lib/site-config'
+import { PHONE_TEL, SERVICE_AREA_DISPLAY } from '@/lib/site-config'
 
 const PHONE_HREF = PHONE_TEL
 
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: "What areas do you service?",
-    answer: "We serve the New York metro area and nearby communities. Contact us with your address so we can confirm coverage and scheduling."
+    answer: `We serve ${SERVICE_AREA_DISPLAY}. Contact us with your address so we can confirm coverage and scheduling.`
   },
   {
     question: "How do I know if my appliance is worth repairing?",

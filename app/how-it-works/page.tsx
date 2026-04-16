@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
-import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site-config'
+import { PHONE_DISPLAY, PHONE_TEL, SERVICE_AREA_DISPLAY } from '@/lib/site-config'
 import { 
   Phone, 
   ArrowRight,
@@ -94,7 +94,7 @@ const faqs = [
   {
     question: 'Who are the technicians?',
     answer:
-      'We connect customers with independent appliance repair technicians in the New York metro area. Licensing and insurance requirements can vary by job and location—ask to see credentials when applicable.',
+      `We connect customers with independent appliance repair technicians in ${SERVICE_AREA_DISPLAY}. Licensing and insurance requirements can vary by job and location—ask to see credentials when applicable.`,
   },
   {
     question: 'What if the repair can\'t be completed in one visit?',

@@ -8,7 +8,7 @@ import { ChatBot } from '@/components/chat-bot'
 import { services, getServiceBySlug } from '@/lib/services'
 import { getServiceCardImage } from '@/lib/service-card-images'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
-import { COMPANY_NAME, PHONE_DISPLAY, PHONE_E164, PHONE_TEL } from '@/lib/site-config'
+import { ADDRESS_LOCALITY, COMPANY_NAME, PHONE_DISPLAY, PHONE_E164, PHONE_TEL } from '@/lib/site-config'
 import { 
   Phone, 
   CheckCircle, 
@@ -82,7 +82,7 @@ export default async function ServicePage({
     },
     areaServed: {
       '@type': 'City',
-      name: 'New York',
+      name: ADDRESS_LOCALITY,
     },
     offers: {
       '@type': 'Offer',
