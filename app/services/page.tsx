@@ -6,7 +6,7 @@ import { services } from '@/lib/services'
 import { Phone, ArrowRight } from 'lucide-react'
 import { getServiceCardImage } from '@/lib/service-card-images'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
-import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site-config'
+import { PHONE_DISPLAY, PHONE_TEL, SERVICE_AREA_CITY } from '@/lib/site-config'
 
 const PHONE_NUMBER = PHONE_DISPLAY
 const PHONE_HREF = PHONE_TEL
@@ -14,7 +14,7 @@ const PHONE_HREF = PHONE_TEL
 export const metadata: Metadata = {
   title: 'Appliance Repair Services',
   description:
-    'Professional appliance repair services in New York. We repair refrigerators, washing machines, dryers, ovens, dishwashers, TVs, and more. Starting prices and written estimates before repair work.',
+    `Professional appliance repair services in ${SERVICE_AREA_CITY}. We repair refrigerators, washing machines, dryers, ovens, dishwashers, TVs, and more. Starting prices and written estimates before repair work.`,
   alternates: {
     canonical: '/services',
   },

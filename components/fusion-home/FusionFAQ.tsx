@@ -6,12 +6,12 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { COMPANY_NAME } from '@/lib/site-config'
+import { COMPANY_NAME, SERVICE_AREA_DISPLAY } from '@/lib/site-config'
 
 const faqs = [
   {
     q: 'How quickly can you come out?',
-    a: 'Appointment timing depends on technician availability and parts. Earlier or next-day windows may be available in the New York metro area (not guaranteed). When you call or book online, we share estimated arrival windows.',
+    a: `Appointment timing depends on technician availability and parts. Earlier or next-day windows may be available in ${SERVICE_AREA_DISPLAY} (not guaranteed). When you call or book online, we share estimated arrival windows.`,
   },
   {
     q: 'How does pricing work?',

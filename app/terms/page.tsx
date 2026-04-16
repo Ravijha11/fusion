@@ -180,9 +180,7 @@ export default function TermsPage() {
               </h2>
               <p className="text-foreground leading-relaxed">
                 These Terms of Service shall be governed by and construed in accordance with the
-                laws of the State of New York, without regard to its conflict-of-law provisions.
-                If you are located in Canada, mandatory consumer protection rules in your province
-                or territory may also apply where they cannot be waived by contract.
+                laws of India, without regard to its conflict-of-law provisions.
               </p>
             </section>
 

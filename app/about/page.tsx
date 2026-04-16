@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
-import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site-config'
+import { PHONE_DISPLAY, PHONE_TEL, SERVICE_AREA_DISPLAY } from '@/lib/site-config'
 import { 
   Phone, 
   CheckCircle, 
@@ -20,7 +20,7 @@ const PHONE_HREF = PHONE_TEL
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn how our appliance repair booking service works in New York: transparent starting prices, written estimates, and clear terms.',
+    `Learn how our appliance repair booking service works in ${SERVICE_AREA_DISPLAY}: transparent starting prices, written estimates, and clear terms.`,
   alternates: {
     canonical: '/about',
   },
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
                   <div className="text-center p-8">
                     <Users className="mx-auto h-16 w-16 text-primary" aria-hidden="true" />
-                    <p className="mt-4 text-lg font-medium text-foreground">Serving the New York metro area &amp; nearby communities</p>
+                    <p className="mt-4 text-lg font-medium text-foreground">Serving {SERVICE_AREA_DISPLAY}</p>
                   </div>
                 </div>
               </div>

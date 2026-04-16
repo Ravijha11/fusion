@@ -13,7 +13,15 @@ import { motion } from 'framer-motion'
 import { trackPhoneClick } from '@/lib/tracking'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
 import { ContactMessageForm } from '@/components/contact-message-form'
-import { EMAIL_SUPPORT, PHONE_DISPLAY, PHONE_TEL, SITE_HOST_DISPLAY, SITE_ORIGIN } from '@/lib/site-config'
+import {
+  ADDRESS_DISPLAY,
+  EMAIL_SUPPORT,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  SERVICE_AREA_DISPLAY,
+  SITE_HOST_DISPLAY,
+  SITE_ORIGIN,
+} from '@/lib/site-config'
 
 const PHONE_NUMBER = PHONE_DISPLAY
 const PHONE_HREF = PHONE_TEL
@@ -102,7 +110,7 @@ export default function ContactPage() {
                       </div>
                       <div className="min-w-0">
                         <p className="font-bold text-[#101921]">Service Area</p>
-                        <p className="text-sm text-gray-600">New York metro area and nearby communities</p>
+                        <p className="text-sm text-gray-600">{SERVICE_AREA_DISPLAY}</p>
                       </div>
                     </div>
 
@@ -120,6 +128,16 @@ export default function ContactPage() {
                         </a>
                       </div>
                     </div>
+                    <div className="rounded-xl bg-white border border-gray-200 p-5 flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-lg bg-[#eef0ff] flex items-center justify-center text-[#3b3be0]">
+                        <MapPin className="h-6 w-6" aria-hidden />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="font-bold text-[#101921]">Address</p>
+                        <p className="text-sm font-semibold text-gray-700 break-words">{ADDRESS_DISPLAY}</p>
+                      </div>
+                    </div>
+
                     <div className="rounded-xl bg-white border border-gray-200 p-5 flex items-center gap-4">
                       <div className="h-12 w-12 rounded-lg bg-[#eef0ff] flex items-center justify-center text-[#3b3be0]">
                         <MapPin className="h-6 w-6" aria-hidden />

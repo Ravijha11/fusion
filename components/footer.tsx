@@ -3,7 +3,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
-import { COMPANY_NAME, EMAIL_SUPPORT, PHONE_DISPLAY, PHONE_TEL, SITE_HOST_DISPLAY, SITE_ORIGIN } from '@/lib/site-config'
+import {
+  ADDRESS_DISPLAY,
+  COMPANY_NAME,
+  EMAIL_SUPPORT,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  SERVICE_AREA_DISPLAY,
+  SITE_HOST_DISPLAY,
+  SITE_ORIGIN,
+} from '@/lib/site-config'
 const PHONE_NUMBER = PHONE_DISPLAY
 const PHONE_HREF = PHONE_TEL
 
@@ -62,8 +71,8 @@ export function Footer() {
             </Link>
 
             <p className="mt-6 text-[15px] leading-relaxed text-white/85">
-              Appliance repair booking in the New York metropolitan area. Clear starting prices on
-              service pages. Read our{' '}
+              Appliance repair booking in {SERVICE_AREA_DISPLAY}. Clear starting prices on service pages.
+              Read our{' '}
               <Link href="/privacy-policy" className="font-semibold text-amber-200 underline-offset-2 hover:underline">
                 Privacy Policy
               </Link>
@@ -115,7 +124,7 @@ export function Footer() {
                 <div className="rounded-full bg-white/10 p-2">
                   <MapPin className="h-4 w-4 text-primary" aria-hidden="true" />
                 </div>
-                <span className="mt-1">New York metro area &amp; nearby communities (USA)</span>
+                <span className="mt-1">{ADDRESS_DISPLAY}</span>
               </div>
             </div>
           </div>
@@ -181,8 +190,7 @@ export function Footer() {
             <p>&copy; {currentYear} {COMPANY_NAME}. All rights reserved.</p>
             <p className="mt-2 max-w-xl text-white/65">
               Prices on this site are shown in <strong className="font-semibold text-white/80">U.S. dollars (USD)</strong>.
-              Service area: United States — New York metropolitan region and nearby communities unless
-              otherwise confirmed when you book.
+              Service area: {SERVICE_AREA_DISPLAY} unless otherwise confirmed when you book.
             </p>
           </div>
           <div className="flex gap-6">

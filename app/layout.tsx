@@ -1,6 +1,18 @@
 import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
-import { COMPANY_NAME, EMAIL_SUPPORT, PHONE_E164, SITE_ORIGIN } from '@/lib/site-config'
+import {
+  ADDRESS_COUNTRY,
+  ADDRESS_LOCALITY,
+  ADDRESS_POSTAL_CODE,
+  ADDRESS_REGION,
+  ADDRESS_STREET,
+  COMPANY_NAME,
+  EMAIL_SUPPORT,
+  PHONE_E164,
+  SERVICE_AREA_CITY,
+  SERVICE_AREA_DISPLAY,
+  SITE_ORIGIN,
+} from '@/lib/site-config'
 import './globals.css'
 import { CookieConsentProvider } from '@/components/cookie-consent-provider'
 import { CookieConsentBanner } from '@/components/cookie-consent-banner'
@@ -15,10 +27,10 @@ export const metadata: Metadata = {
     template: `%s | ${COMPANY_NAME}`,
   },
   description:
-    'Appliance repair booking in the New York area: refrigerators, laundry, cooking appliances, and more. Clear starting prices and written estimates before repair work.',
+    `Appliance repair booking in ${SERVICE_AREA_DISPLAY}: refrigerators, laundry, cooking appliances, and more. Clear starting prices and written estimates before repair work.`,
   keywords: [
     'appliance repair',
-    'New York',
+    SERVICE_AREA_CITY,
     'refrigerator repair',
     'washing machine repair',
     COMPANY_NAME,
@@ -37,7 +49,7 @@ export const metadata: Metadata = {
     siteName: COMPANY_NAME,
     title: `${COMPANY_NAME} — Appliance Repair Booking`,
     description:
-      'Appliance repair booking in the New York area with clear starting prices and written estimates before repair work.',
+      `Appliance repair booking in ${SERVICE_AREA_DISPLAY} with clear starting prices and written estimates before repair work.`,
     images: [
       {
         url: '/og-image.jpg',
@@ -51,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${COMPANY_NAME} — Appliance Repair Booking`,
     description:
-      'Appliance repair booking in New York with qualified technicians and clear starting prices.',
+      `Appliance repair booking in ${SERVICE_AREA_DISPLAY} with qualified technicians and clear starting prices.`,
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -93,19 +105,21 @@ const localBusinessSchema = {
   '@id': `${SITE_ORIGIN}/#organization`,
   name: COMPANY_NAME,
   description:
-    'Appliance repair booking in New York with qualified technicians and clear starting prices.',
+    `Appliance repair booking in ${SERVICE_AREA_DISPLAY} with qualified technicians and clear starting prices.`,
   url: SITE_ORIGIN,
   ...(PHONE_E164 ? { telephone: PHONE_E164 } : {}),
   email: EMAIL_SUPPORT,
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'New York',
-    addressRegion: 'NY',
-    addressCountry: 'US',
+    streetAddress: ADDRESS_STREET,
+    addressLocality: ADDRESS_LOCALITY,
+    addressRegion: ADDRESS_REGION,
+    postalCode: ADDRESS_POSTAL_CODE,
+    addressCountry: ADDRESS_COUNTRY,
   },
   areaServed: {
     '@type': 'City',
-    name: 'New York',
+    name: ADDRESS_LOCALITY,
   },
   priceRange: '$$',
   openingHoursSpecification: [
