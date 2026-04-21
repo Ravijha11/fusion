@@ -183,7 +183,7 @@ export default function ContactPage() {
                       </div>
                       <div className="min-w-0">
                         <p className="font-bold text-[#101921]">Business Hours</p>
-                        <p className="text-sm text-gray-600">Mon–Fri: 08:00–18:00 · Sat–Sun: 09:00–16:00</p>
+                        <p className="text-sm text-gray-600">Mon–Fri: 08:00–18:00 ET · Sat–Sun: 09:00–16:00 ET</p>
                       </div>
                     </div>
                   </div>

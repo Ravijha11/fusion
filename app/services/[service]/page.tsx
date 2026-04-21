@@ -424,7 +424,7 @@ export default async function ServicePage({
                     {PHONE_NUMBER}
                   </a>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Available Mon-Fri 8am-6pm, Sat 9am-4pm
+                    Available Mon-Fri 8am-6pm ET, Sat 9am-4pm ET
                   </p>
                   <p className="mt-2 text-xs text-muted-foreground">
                     See{' '}
