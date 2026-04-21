@@ -180,7 +180,8 @@ export default function TermsPage() {
               </h2>
               <p className="text-foreground leading-relaxed">
                 These Terms of Service shall be governed by and construed in accordance with the
-                laws of India, without regard to its conflict-of-law provisions.
+                laws of the State of New York, United States, without regard to its conflict-of-law
+                provisions.
               </p>
             </section>
 
