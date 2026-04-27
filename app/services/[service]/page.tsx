@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BookingForm } from '@/components/booking-form'
 import { Button } from '@/components/ui/button'
-import { ChatBot } from '@/components/chat-bot'
 import { services, getServiceBySlug } from '@/lib/services'
 import { getServiceCardImage } from '@/lib/service-card-images'
 import { BOOK_SERVICE_BG, BOOK_SERVICE_FG } from '@/lib/book-service-theme'
@@ -102,7 +101,6 @@ export default async function ServicePage({
     <>
       
       <main id="main-content" className="flex-1">
-        <ChatBot serviceSlug={service.slug} />
         {/* Structured Data */}
         <script
           type="application/ld+json"

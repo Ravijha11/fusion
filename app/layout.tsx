@@ -19,7 +19,7 @@ import { CookieConsentBanner } from '@/components/cookie-consent-banner'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/footer'
 import { ContactPromoStrip } from '@/components/layout/ContactPromoStrip'
-import { ChatBot } from '@/components/chat-bot'
+import { TawkTo } from '@/components/tawk-to'
 
 export const metadata: Metadata = {
   title: {
@@ -163,7 +163,7 @@ export default function RootLayout({
             <ContactPromoStrip />
             <Footer />
           </div>
-          <ChatBot />
+          <TawkTo />
           <CookieConsentBanner />
         </CookieConsentProvider>
         
